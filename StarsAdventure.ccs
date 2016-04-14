@@ -1,0 +1,57 @@
+<Solution>
+  <PropertyGroup Name="StarsAdventure" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="Animation" />
+        <Folder Name="Images">
+          <Folder Name="Player">
+            <Image Name="player_dead_1.png" />
+            <Image Name="player_dead_2.png" />
+            <Image Name="player_dead_3.png" />
+            <Image Name="player_dead_4.png" />
+            <Image Name="player_dead_5.png" />
+            <Image Name="player_dead_6.png" />
+            <Image Name="player_idle_1.png" />
+            <Image Name="player_idle_2.png" />
+            <Image Name="player_idle_3.png" />
+            <Image Name="player_idle_4.png" />
+            <Image Name="player_jump_1.png" />
+            <Image Name="player_jump_2.png" />
+            <Image Name="player_jump_3.png" />
+            <Image Name="player_jump_4.png" />
+            <Image Name="player_jump_5.png" />
+            <Image Name="player_jump_6.png" />
+            <Image Name="player_jump_7.png" />
+            <Image Name="player_walk_1.png" />
+            <Image Name="player_walk_2.png" />
+            <Image Name="player_walk_3.png" />
+            <PlistInfo Name="Player.csi" Type="Plist" />
+          </Folder>
+          <Folder Name="UI">
+            <Image Name="attack_1.png" />
+            <Image Name="attack_2.png" />
+            <Image Name="left_1.png" />
+            <Image Name="left_2.png" />
+            <Image Name="right_1.png" />
+            <Image Name="right_2.png" />
+            <Image Name="sattack_1.png" />
+            <Image Name="sattack_2.png" />
+            <Image Name="skill_1.png" />
+            <Image Name="skill_2.png" />
+            <PlistInfo Name="UIPlist.csi" Type="Plist" />
+          </Folder>
+        </Folder>
+        <Folder Name="Node">
+          <Project Name="PlayerNode.csd" Type="Node" />
+          <Project Name="UILayer.csd" Type="Layer" />
+        </Folder>
+        <Folder Name="Scene">
+          <Project Name="GameScene.csd" Type="Scene" />
+        </Folder>
+        <Image Name="HelloWorld.png" />
+        <Project Name="MainScene.csd" Type="Scene" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

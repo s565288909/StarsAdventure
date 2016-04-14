@@ -1,0 +1,18 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="UIPlist" Type="Plist" ID="e4cfb730-54a6-4d31-8ecf-211f911bfca1" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="False" AllowTrim="False" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Images/UI/attack_1.png" />
+      <FilePathData Path="Images/UI/attack_2.png" />
+      <FilePathData Path="Images/UI/left_1.png" />
+      <FilePathData Path="Images/UI/left_2.png" />
+      <FilePathData Path="Images/UI/right_1.png" />
+      <FilePathData Path="Images/UI/right_2.png" />
+      <FilePathData Path="Images/UI/sattack_1.png" />
+      <FilePathData Path="Images/UI/sattack_2.png" />
+      <FilePathData Path="Images/UI/skill_1.png" />
+      <FilePathData Path="Images/UI/skill_2.png" />
+    </ImageFiles>
+    <MaxSize Width="512" Height="512" />
+  </Content>
+</PlistInfoProjectFile>

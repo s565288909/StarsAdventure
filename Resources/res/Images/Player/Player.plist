@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Images/Player/player_dead_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{600,287},{111,169}}</string>
+				<key>offset</key>
+				<string>{-55,-17}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{244,225}</string>
+			</dict>
+			<key>Images/Player/player_dead_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{658,0},{114,171}}</string>
+				<key>offset</key>
+				<string>{-33,-13}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{244,225}</string>
+			</dict>
+			<key>Images/Player/player_dead_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{319,0},{130,168}}</string>
+				<key>offset</key>
+				<string>{-12,-18}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{244,225}</string>
+			</dict>
+			<key>Images/Player/player_dead_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{155,150}}</string>
+				<key>offset</key>
+				<string>{-1,-24}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{244,225}</string>
+			</dict>
+			<key>Images/Player/player_dead_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{155,0},{164,134}}</string>
+				<key>offset</key>
+				<string>{12,-36}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{244,225}</string>
+			</dict>
+			<key>Images/Player/player_dead_6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{487,0},{171,116}}</string>
+				<key>offset</key>
+				<string>{22,-50}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{244,225}</string>
+			</dict>
+			<key>Images/Player/player_idle_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{377,338},{111,169}}</string>
+				<key>offset</key>
+				<string>{0,-2}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_idle_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{487,116},{111,171}}</string>
+				<key>offset</key>
+				<string>{0,-1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_idle_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{829,111},{112,172}}</string>
+				<key>offset</key>
+				<string>{1,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_idle_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{319,130},{111,170}}</string>
+				<key>offset</key>
+				<string>{1,-1}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_jump_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{155,134},{111,170}}</string>
+				<key>offset</key>
+				<string>{-3,-5}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,179}</string>
+			</dict>
+			<key>Images/Player/player_jump_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,150},{111,170}}</string>
+				<key>offset</key>
+				<string>{-2,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,179}</string>
+			</dict>
+			<key>Images/Player/player_jump_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{430,227},{111,170}}</string>
+				<key>offset</key>
+				<string>{-1,-6}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,215}</string>
+			</dict>
+			<key>Images/Player/player_jump_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{266,300},{111,170}}</string>
+				<key>offset</key>
+				<string>{-2,3}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,215}</string>
+			</dict>
+			<key>Images/Player/player_jump_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{111,304},{111,170}}</string>
+				<key>offset</key>
+				<string>{-1,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,215}</string>
+			</dict>
+			<key>Images/Player/player_jump_6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,320},{111,170}}</string>
+				<key>offset</key>
+				<string>{0,-10}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,215}</string>
+			</dict>
+			<key>Images/Player/player_jump_7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{769,334},{111,169}}</string>
+				<key>offset</key>
+				<string>{-3,-23}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,215}</string>
+			</dict>
+			<key>Images/Player/player_walk_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{769,223},{111,170}}</string>
+				<key>offset</key>
+				<string>{-3,-4}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_walk_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{829,0},{111,175}}</string>
+				<key>offset</key>
+				<string>{-1,-1}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_walk_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{658,114},{111,173}}</string>
+				<key>offset</key>
+				<string>{-1,-2}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>Player.png</string>
+			<key>realTextureFileName</key>
+			<string>Player.png</string>
+			<key>size</key>
+			<string>{1024,512}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>512</integer>
+		</dict>
+	</dict>
+</plist>
