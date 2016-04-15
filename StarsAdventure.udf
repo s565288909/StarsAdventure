@@ -11,7 +11,7 @@
         <iOS_Target Value="StarsAdventure-mobile" />
         <iOS_BundleID Value="" />
         <Platform Value="None" />
-        <RunPlatform Value="None" />
+        <RunPlatform Value="Windows" />
         <FrameworkVersion Value="cocos2d-x-3.10" />
         <IsDebugKeystore Value="True" />
         <EnableSourceMap Value="False" />
@@ -20,9 +20,21 @@
     </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="Resource" />
+        <LastPublishType Value="VS" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Windows" />
+      </Value>
+    </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="MainScene.csd" />
+          <FilePathData Path="Scene/GameScene.csd" />
+          <FilePathData Path="Images/Player/Player.csi" />
+          <FilePathData Path="Node/PlayerNode.csd" />
+          <FilePathData Path="Node/UILayer.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="Node/UILayer.csd" />
       </Value>
     </Item>
   </Properties>

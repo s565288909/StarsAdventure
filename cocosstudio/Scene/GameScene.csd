@@ -16,7 +16,7 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Node/UILayer.csd" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Player" ActionTag="1396539866" Tag="19" IconVisible="True" LeftMargin="568.7765" RightMargin="567.2235" TopMargin="392.6459" BottomMargin="247.3540" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="Player" ActionTag="1396539866" Tag="19" IconVisible="True" LeftMargin="568.7765" RightMargin="567.2235" TopMargin="392.6460" BottomMargin="247.3540" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
             <Position X="568.7765" Y="247.3540" />
