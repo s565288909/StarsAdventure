@@ -30,6 +30,8 @@ bool GameScene::init(){
 	auto rootnode = CSLoader::createNode("Scene/GameScene.csb");
 	this->addChild(rootnode);
 
+	player = Player::Create(rootnode->getChildByName("Player"));
+
 	n_GameUI = rootnode->getChildByName("UILayer");
 
 	auto bt_Left = (Button*)n_GameUI->getChildByName("Bt_Left");

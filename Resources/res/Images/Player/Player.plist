@@ -7,22 +7,22 @@
 			<key>Images/Player/player_dead_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{600,287},{111,169}}</string>
+				<string>{{111,476},{111,169}}</string>
 				<key>offset</key>
 				<string>{-55,-17}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{244,225}</string>
 			</dict>
 			<key>Images/Player/player_dead_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{658,0},{114,171}}</string>
+				<string>{{656,120},{114,171}}</string>
 				<key>offset</key>
 				<string>{-33,-13}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{244,225}</string>
 			</dict>
@@ -62,7 +62,7 @@
 			<key>Images/Player/player_dead_6.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{487,0},{171,116}}</string>
+				<string>{{826,119},{171,116}}</string>
 				<key>offset</key>
 				<string>{22,-50}</string>
 				<key>rotated</key>
@@ -73,18 +73,18 @@
 			<key>Images/Player/player_idle_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{377,338},{111,169}}</string>
+				<string>{{0,493},{111,169}}</string>
 				<key>offset</key>
 				<string>{0,-2}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{136,177}</string>
 			</dict>
 			<key>Images/Player/player_idle_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{487,116},{111,171}}</string>
+				<string>{{770,235},{111,171}}</string>
 				<key>offset</key>
 				<string>{0,-1}</string>
 				<key>rotated</key>
@@ -95,29 +95,29 @@
 			<key>Images/Player/player_idle_3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{829,111},{112,172}}</string>
+				<string>{{155,134},{112,172}}</string>
 				<key>offset</key>
 				<string>{1,0}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{136,177}</string>
 			</dict>
 			<key>Images/Player/player_idle_4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{319,130},{111,170}}</string>
+				<string>{{598,291},{111,170}}</string>
 				<key>offset</key>
 				<string>{1,-1}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{136,177}</string>
 			</dict>
 			<key>Images/Player/player_jump_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{155,134},{111,170}}</string>
+				<string>{{433,298},{111,170}}</string>
 				<key>offset</key>
 				<string>{-3,-5}</string>
 				<key>rotated</key>
@@ -128,7 +128,7 @@
 			<key>Images/Player/player_jump_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,150},{111,170}}</string>
+				<string>{{267,299},{111,170}}</string>
 				<key>offset</key>
 				<string>{-2,3}</string>
 				<key>rotated</key>
@@ -139,18 +139,18 @@
 			<key>Images/Player/player_jump_3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{430,227},{111,170}}</string>
+				<string>{{111,306},{111,170}}</string>
 				<key>offset</key>
 				<string>{-1,-6}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{136,215}</string>
 			</dict>
 			<key>Images/Player/player_jump_4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{266,300},{111,170}}</string>
+				<string>{{0,323},{111,170}}</string>
 				<key>offset</key>
 				<string>{-2,3}</string>
 				<key>rotated</key>
@@ -161,29 +161,29 @@
 			<key>Images/Player/player_jump_5.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{111,304},{111,170}}</string>
+				<string>{{768,346},{111,170}}</string>
 				<key>offset</key>
 				<string>{-1,-4}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{136,215}</string>
 			</dict>
 			<key>Images/Player/player_jump_6.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,320},{111,170}}</string>
+				<string>{{544,402},{111,170}}</string>
 				<key>offset</key>
 				<string>{0,-10}</string>
 				<key>rotated</key>
-				<false />
+				<true />
 				<key>sourceSize</key>
 				<string>{136,215}</string>
 			</dict>
 			<key>Images/Player/player_jump_7.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{769,334},{111,169}}</string>
+				<string>{{714,457},{111,169}}</string>
 				<key>offset</key>
 				<string>{-3,-23}</string>
 				<key>rotated</key>
@@ -194,33 +194,99 @@
 			<key>Images/Player/player_walk_1.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{769,223},{111,170}}</string>
+				<string>{{378,468},{111,170}}</string>
 				<key>offset</key>
 				<string>{-3,-4}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{136,177}</string>
 			</dict>
 			<key>Images/Player/player_walk_2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{829,0},{111,175}}</string>
+				<string>{{487,123},{111,175}}</string>
 				<key>offset</key>
 				<string>{-1,-1}</string>
 				<key>rotated</key>
-				<true />
+				<false />
 				<key>sourceSize</key>
 				<string>{136,177}</string>
 			</dict>
 			<key>Images/Player/player_walk_3.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{658,114},{111,173}}</string>
+				<string>{{0,150},{111,173}}</string>
 				<key>offset</key>
 				<string>{-1,-2}</string>
 				<key>rotated</key>
 				<false />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_attack_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{826,0},{119,169}}</string>
+				<key>offset</key>
+				<string>{2,-4}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_attack_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{656,0},{120,170}}</string>
+				<key>offset</key>
+				<string>{1,-4}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_attack_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{883,457},{111,169}}</string>
+				<key>offset</key>
+				<string>{5,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_attack_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{222,469},{111,170}}</string>
+				<key>offset</key>
+				<string>{6,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_attack_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{319,130},{114,169}}</string>
+				<key>offset</key>
+				<string>{5,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{136,177}</string>
+			</dict>
+			<key>Images/Player/player_attack_6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{487,0},{123,169}}</string>
+				<key>offset</key>
+				<string>{0,-4}</string>
+				<key>rotated</key>
+				<true />
 				<key>sourceSize</key>
 				<string>{136,177}</string>
 			</dict>
@@ -234,14 +300,14 @@
 			<key>realTextureFileName</key>
 			<string>Player.png</string>
 			<key>size</key>
-			<string>{1024,512}</string>
+			<string>{1024,1024}</string>
 		</dict>
 		<key>texture</key>
 		<dict>
 			<key>width</key>
 			<integer>1024</integer>
 			<key>height</key>
-			<integer>512</integer>
+			<integer>1024</integer>
 		</dict>
 	</dict>
 </plist>

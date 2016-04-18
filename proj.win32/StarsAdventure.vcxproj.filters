@@ -10,6 +10,15 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scene">
+      <UniqueIdentifier>{0545d510-d391-42e5-9a2d-3c0c3fd591c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Node">
+      <UniqueIdentifier>{b1c7b90d-0758-4e57-bcbd-5f0d77d17c83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Enity">
+      <UniqueIdentifier>{226bf254-5061-42ce-94d9-3d7c29fe471f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -18,17 +27,20 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\GameScene.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src\Scene</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\GameUI.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Node</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Enity.cpp">
-      <Filter>src</Filter>
+      <Filter>src\Enity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>src\Enity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,17 +50,20 @@
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\GameScene.h">
-      <Filter>src</Filter>
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src\Scene</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\GameUI.h">
-      <Filter>src</Filter>
+      <Filter>src\Node</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Enity.h">
-      <Filter>src</Filter>
+      <Filter>src\Enity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>src\Enity</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

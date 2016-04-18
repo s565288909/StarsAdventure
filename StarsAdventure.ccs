@@ -27,6 +27,13 @@
             <Image Name="player_walk_1.png" />
             <Image Name="player_walk_2.png" />
             <Image Name="player_walk_3.png" />
+            <Image Name="player_attack_1.png" />
+            <Image Name="player_attack_2.png" />
+            <Image Name="player_attack_3.png" />
+            <Image Name="player_attack_4.png" />
+            <Image Name="player_attack_5.png" />
+            <Image Name="player_attack_6.png" />
+            <Image Name="player_attack_7.png" />
           </Folder>
           <Folder Name="UI">
             <Image Name="attack_1.png" />

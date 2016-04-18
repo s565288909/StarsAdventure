@@ -22,6 +22,12 @@
       <FilePathData Path="Images/Player/player_walk_1.png" />
       <FilePathData Path="Images/Player/player_walk_2.png" />
       <FilePathData Path="Images/Player/player_walk_3.png" />
+      <FilePathData Path="Images/Player/player_attack_1.png" />
+      <FilePathData Path="Images/Player/player_attack_2.png" />
+      <FilePathData Path="Images/Player/player_attack_3.png" />
+      <FilePathData Path="Images/Player/player_attack_4.png" />
+      <FilePathData Path="Images/Player/player_attack_5.png" />
+      <FilePathData Path="Images/Player/player_attack_6.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

@@ -30,11 +30,10 @@
         <OpenedDocuments>
           <FilePathData Path="MainScene.csd" />
           <FilePathData Path="Scene/GameScene.csd" />
-          <FilePathData Path="Images/Player/Player.csi" />
           <FilePathData Path="Node/PlayerNode.csd" />
           <FilePathData Path="Node/UILayer.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Node/UILayer.csd" />
+        <ActiveDocument Path="Scene/GameScene.csd" />
       </Value>
     </Item>
   </Properties>
