@@ -3,10 +3,16 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
-        <Folder Name="Animation" />
         <Folder Name="Images">
           <Folder Name="Player">
             <PlistInfo Name="Player.csi" Type="Plist" />
+            <Image Name="player_attack_1.png" />
+            <Image Name="player_attack_2.png" />
+            <Image Name="player_attack_3.png" />
+            <Image Name="player_attack_4.png" />
+            <Image Name="player_attack_5.png" />
+            <Image Name="player_attack_6.png" />
+            <Image Name="player_attack_7.png" />
             <Image Name="player_dead_1.png" />
             <Image Name="player_dead_2.png" />
             <Image Name="player_dead_3.png" />
@@ -27,13 +33,6 @@
             <Image Name="player_walk_1.png" />
             <Image Name="player_walk_2.png" />
             <Image Name="player_walk_3.png" />
-            <Image Name="player_attack_1.png" />
-            <Image Name="player_attack_2.png" />
-            <Image Name="player_attack_3.png" />
-            <Image Name="player_attack_4.png" />
-            <Image Name="player_attack_5.png" />
-            <Image Name="player_attack_6.png" />
-            <Image Name="player_attack_7.png" />
           </Folder>
           <Folder Name="UI">
             <Image Name="attack_1.png" />

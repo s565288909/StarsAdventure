@@ -2,7 +2,7 @@
 
 #include "cocos2d.h"
 #include "Enity.h"
-#include "cocostudio\CocoStudio.h"
+#include <cocostudio/CocoStudio.h>
 
 class Player : public Enity
 {
@@ -11,7 +11,14 @@ public:
 	~Player();
 	void initData();
 	static Player* Create(cocos2d::Node* node);
+    void MoveLeft();
+    void MoveRight();
+    void Attack();
+    void Jump();
+    void Dead();
 private:
 	cocos2d::Vec2 m_pos;
-	cocostudio::Armature* arm;
+    cocos2d::Node* leftNode;
+    cocos2d::Node* rightNode;
+    cocostudio::timeline::ActionTimeline* m_action;
 };

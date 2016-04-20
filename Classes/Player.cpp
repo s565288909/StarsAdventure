@@ -29,21 +29,54 @@ void Player::initData(){
 	isDead = false;
 	HP = 100;
 	MP = 0;
-	auto leftnode = m_Node->getChildByName("Player_Left");
-	auto rightnode = m_Node->getChildByName("Player_Right");
-	leftnode->setVisible(false);
-	rightnode->setVisible(false);
+    m_action = CSLoader::createTimeline("Node/PlayerNode.csb");
+    m_Node->runAction(m_action);
+	leftNode = m_Node->getChildByName("Player_Left");
+	rightNode = m_Node->getChildByName("Player_Right");
+	leftNode->setVisible(false);
+	rightNode->setVisible(false);
 	m_Dir = Dir::Left;
 	switch (m_Dir)
 	{
 	case Enity::Left:
-		leftnode->setVisible(true);
+		leftNode->setVisible(true);
 		break;
 	case Enity::Right:
-		rightnode->setVisible(true);
+		rightNode->setVisible(true);
 		break;
 	}
+    m_action->play("P_Idle", true);
 	m_State = State::Idle;
-	arm = (Armature*)m_Node;
-	arm->getAnimation()->play("P_Idle", true);
+}
+
+void Player::MoveLeft()
+{
+    if (m_State==State::Idle) {
+        if (m_Dir != Dir::Left) {
+            m_Dir = Dir::Left;
+            leftNode->setVisible(true);
+            rightNode->setVisible(false);
+        }
+        m_action->play("P_Walk", true);
+        m_State = State::Walk;
+    }
+}
+
+void Player::MoveRight()
+{
+    if (m_State==State::Idle) {
+        if (m_Dir != Dir::Right) {
+            m_Dir = Dir::Right;
+            leftNode->setVisible(false);
+            rightNode->setVisible(true);
+        }
+        m_action->play("P_Walk", true);
+        m_State = State::Walk;
+    }
+}
+
+void Player::Attack()
+{
+    m_action->play("P_Attack", false);
+    m_State = State::Attack;
 }

@@ -61,6 +61,14 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		F5ACDD451CC6806200FAF6F3 /* Enity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */; };
+		F5ACDD461CC6806200FAF6F3 /* Enity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */; };
+		F5ACDD471CC6806200FAF6F3 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */; };
+		F5ACDD481CC6806200FAF6F3 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */; };
+		F5ACDD491CC6806200FAF6F3 /* GameUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD411CC6806200FAF6F3 /* GameUI.cpp */; };
+		F5ACDD4A1CC6806200FAF6F3 /* GameUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD411CC6806200FAF6F3 /* GameUI.cpp */; };
+		F5ACDD4B1CC6806200FAF6F3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD431CC6806200FAF6F3 /* Player.cpp */; };
+		F5ACDD4C1CC6806200FAF6F3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD431CC6806200FAF6F3 /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +129,14 @@
 		E6BC457AB2ABD9A38B6F5AD7 /* res */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = res; path = ../Resources/res; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enity.cpp; sourceTree = "<group>"; };
+		F5ACDD3E1CC6806200FAF6F3 /* Enity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enity.h; sourceTree = "<group>"; };
+		F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		F5ACDD401CC6806200FAF6F3 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		F5ACDD411CC6806200FAF6F3 /* GameUI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameUI.cpp; sourceTree = "<group>"; };
+		F5ACDD421CC6806200FAF6F3 /* GameUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUI.h; sourceTree = "<group>"; };
+		F5ACDD431CC6806200FAF6F3 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		F5ACDD441CC6806200FAF6F3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +267,14 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */,
+				F5ACDD3E1CC6806200FAF6F3 /* Enity.h */,
+				F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */,
+				F5ACDD401CC6806200FAF6F3 /* GameScene.h */,
+				F5ACDD411CC6806200FAF6F3 /* GameUI.cpp */,
+				F5ACDD421CC6806200FAF6F3 /* GameUI.h */,
+				F5ACDD431CC6806200FAF6F3 /* Player.cpp */,
+				F5ACDD441CC6806200FAF6F3 /* Player.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -425,7 +449,11 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				F5ACDD4B1CC6806200FAF6F3 /* Player.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				F5ACDD491CC6806200FAF6F3 /* GameUI.cpp in Sources */,
+				F5ACDD451CC6806200FAF6F3 /* Enity.cpp in Sources */,
+				F5ACDD471CC6806200FAF6F3 /* GameScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
@@ -435,9 +463,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5ACDD481CC6806200FAF6F3 /* GameScene.cpp in Sources */,
+				F5ACDD4C1CC6806200FAF6F3 /* Player.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				F5ACDD461CC6806200FAF6F3 /* Enity.cpp in Sources */,
+				F5ACDD4A1CC6806200FAF6F3 /* GameUI.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,10 +501,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -507,10 +536,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -546,10 +572,7 @@
 					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
@@ -580,10 +603,7 @@
 					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = (
-					"",
-					"/Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac",
-				);
+				LIBRARY_SEARCH_PATHS = " /Applications/Cocos/Cocos2d-x/cocos2d-x-3.10/prebuilt/mac";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
