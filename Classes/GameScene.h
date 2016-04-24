@@ -12,15 +12,19 @@ public:
 	static cocos2d::Scene* createScene();
 
 	virtual bool init();
+    
+    virtual void update(float delta);
 
 	CREATE_FUNC(GameScene);
 
 private:
 	cocos2d::Node* n_GameUI;
 	Player* player;
+    
+    bool moveL,moveR;
 
-	void BtLeftOnClick(Ref *pSender);
-	void BtRightOnClick(Ref *pSender);
+    void BtLeftOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
+    void BtRightOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
 	void BtAttackOnClick(Ref *pSender);
 	void BtJumpOnClick(Ref *pSender);
 };

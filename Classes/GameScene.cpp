@@ -27,6 +27,11 @@ bool GameScene::init(){
 	{
 		return false;
 	}
+    moveL = moveR = false;
+    
+    auto whitelayer = CCLayerColor::create(ccc4(255, 251, 240, 255));
+    this->addChild(whitelayer);
+    
 	auto rootnode = CSLoader::createNode("Scene/GameScene.csb");
 	this->addChild(rootnode);
 
@@ -39,26 +44,73 @@ bool GameScene::init(){
 	auto bt_Attack = (Button*)n_GameUI->getChildByName("Bt_Attack");
 	auto bt_Jump = (Button*)n_GameUI->getChildByName("Bt_Jump");
 
-	bt_Left->addClickEventListener(CC_CALLBACK_1(GameScene::BtLeftOnClick, this));
-	bt_Right->addClickEventListener(CC_CALLBACK_1(GameScene::BtRightOnClick, this));
+    bt_Left->addTouchEventListener(CC_CALLBACK_2(GameScene::BtLeftOnTouch, this));
+    bt_Right->addTouchEventListener(CC_CALLBACK_2(GameScene::BtRightOnTouch, this));
 	bt_Attack->addClickEventListener(CC_CALLBACK_1(GameScene::BtAttackOnClick, this));
 	bt_Jump->addClickEventListener(CC_CALLBACK_1(GameScene::BtJumpOnClick, this));
 
+    this->scheduleUpdate();
 	return true;
 }
 
-void GameScene::BtLeftOnClick(Ref *pSender){
-	CCLOG("OnClick");
+void GameScene::update(float delta){
+    if (moveL) {
+        player->MoveLeft();
+    }else if (moveR){
+        player->MoveRight();
+    }
 }
 
-void GameScene::BtRightOnClick(Ref *pSender){
-	
+void GameScene::BtLeftOnTouch(Ref *pSender, Widget::TouchEventType type)
+{
+    switch (type) {
+        case Widget::TouchEventType::BEGAN:
+            if(!moveR) moveL = true;
+            break;
+        case Widget::TouchEventType::ENDED:
+            if(!moveR){
+                moveL = false;
+                player->StopMove();
+            }
+            break;
+        case Widget::TouchEventType::CANCELED:
+            if(!moveR){
+                moveL = false;
+                player->StopMove();
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+void GameScene::BtRightOnTouch(Ref *pSender, Widget::TouchEventType type)
+{
+    switch (type) {
+        case Widget::TouchEventType::BEGAN:
+            if(!moveL) moveR = true;
+            break;
+        case Widget::TouchEventType::ENDED:
+            if(!moveL){
+                moveR = false;
+                player->StopMove();
+            }
+            break;
+        case Widget::TouchEventType::CANCELED:
+            if(!moveL){
+                moveR = false;
+                player->StopMove();
+            }
+            break;
+        default:
+            break;
+    }
 }
 
 void GameScene::BtAttackOnClick(Ref *pSender){
-
+    player->Attack();
 }
 
 void GameScene::BtJumpOnClick(Ref *pSender){
-
+    player->Jump();
 }

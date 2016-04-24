@@ -29,6 +29,8 @@ void Player::initData(){
 	isDead = false;
 	HP = 100;
 	MP = 0;
+    moveSpeed = 3;
+    jumpSpeed = 3;
     m_action = CSLoader::createTimeline("Node/PlayerNode.csb");
     m_Node->runAction(m_action);
 	leftNode = m_Node->getChildByName("Player_Left");
@@ -60,6 +62,7 @@ void Player::MoveLeft()
         m_action->play("P_Walk", true);
         m_State = State::Walk;
     }
+    m_Node->setPositionX(m_Node->getPositionX()-moveSpeed);
 }
 
 void Player::MoveRight()
@@ -73,10 +76,34 @@ void Player::MoveRight()
         m_action->play("P_Walk", true);
         m_State = State::Walk;
     }
+    m_Node->setPositionX(m_Node->getPositionX()+moveSpeed);
+}
+
+void Player::StopMove(){
+    m_action->play("P_Idle", true);
+    m_State = State::Idle;
+}
+
+void Player::Jump(){
+    if (m_State!=State::Jump && m_State!=State::Attack) {
+        m_action->play("P_Jump", false);
+        m_action->setAnimationEndCallFunc("P_Jump", [&]{
+            m_action->play("P_Idle", true);
+            m_State = State::Idle;
+        });
+    }
 }
 
 void Player::Attack()
 {
-    m_action->play("P_Attack", false);
-    m_State = State::Attack;
+    if (m_State!=State::Jump) {
+        m_action->play("P_Attack", false);
+        
+        m_action->setAnimationEndCallFunc("P_Attack", [&]{
+            m_action->play("P_Idle", true);
+            m_State = State::Idle;
+        });
+        m_State = State::Jump;
+    }
+
 }
