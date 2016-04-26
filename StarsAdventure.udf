@@ -20,9 +20,9 @@
     </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="XCode" />
+        <LastPublishType Value="VS" />
         <IsLastPublish Value="True" />
-        <LastRunType Value="Mac" />
+        <LastRunType Value="Windows" />
       </Value>
     </Item>
     <Item Key="TabsParamsKey">

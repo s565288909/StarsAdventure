@@ -1,0 +1,11 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="ScenesPlist" Type="Plist" ID="90b7a354-3193-4f1c-9796-286f47e6a699" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="False" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Images/Scenes/block.png" />
+      <FilePathData Path="Images/Scenes/bottombg.png" />
+      <FilePathData Path="Images/Scenes/floor_1.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

@@ -290,26 +290,26 @@
       <ObjectData Name="Node" Tag="4" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="Player_Left" ActionTag="-1816853842" Tag="15" IconVisible="False" LeftMargin="-74.0000" RightMargin="-62.0000" TopMargin="-88.5000" BottomMargin="-88.5000" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Player_Left" ActionTag="-1816853842" Tag="15" IconVisible="False" LeftMargin="-68.0000" RightMargin="-68.0000" TopMargin="-88.5000" BottomMargin="-88.5000" ctype="SpriteObjectData">
             <Size X="136.0000" Y="177.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="-6.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <Position />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Images/Player/player_attack_6.png" Plist="Images/Player/Player.plist" />
+            <FileData Type="MarkedSubImage" Path="Images/Player/player_idle_1.png" Plist="Images/Player/Player.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Player_Right" ActionTag="-1507850693" Tag="17" IconVisible="False" LeftMargin="-62.0000" RightMargin="-74.0000" TopMargin="-88.5000" BottomMargin="-88.5000" FlipX="True" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Player_Right" ActionTag="-1507850693" Tag="17" IconVisible="False" LeftMargin="-68.0000" RightMargin="-68.0000" TopMargin="-88.5000" BottomMargin="-88.5000" FlipX="True" ctype="SpriteObjectData">
             <Size X="136.0000" Y="177.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="6.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <Position />
+            <Scale ScaleX="0.7000" ScaleY="0.7000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Images/Player/player_attack_6.png" Plist="Images/Player/Player.plist" />
+            <FileData Type="MarkedSubImage" Path="Images/Player/player_idle_1.png" Plist="Images/Player/Player.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>

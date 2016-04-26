@@ -20,8 +20,11 @@ public:
 private:
 	cocos2d::Node* n_GameUI;
 	Player* player;
-    
+  
     bool moveL,moveR;
+
+	void genFloors();
+	void setAllZOrders();
 
     void BtLeftOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
     void BtRightOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);

@@ -1,6 +1,7 @@
 #include "GameScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
+#include "Floor.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -59,6 +60,21 @@ void GameScene::update(float delta){
     }else if (moveR){
         player->MoveRight();
     }
+}
+
+void GameScene::genFloors(){
+	Floor floor = CSLoader::createNode("Node/Floor.csb");
+}
+
+void GameScene::setAllZOrders()
+{
+	//人物等Zorder值:10-49
+	//Floor的Zorder值：50-99
+	//场景的UILayer等：100-
+	player->getNode()->setZOrder(10);
+
+	n_GameUI->setZOrder(100);
+
 }
 
 void GameScene::BtLeftOnTouch(Ref *pSender, Widget::TouchEventType type)

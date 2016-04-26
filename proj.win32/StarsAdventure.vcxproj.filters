@@ -42,6 +42,9 @@
     <ClCompile Include="..\Classes\Player.cpp">
       <Filter>src\Enity</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Floor.cpp">
+      <Filter>src\Node</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -64,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Player.h">
       <Filter>src\Enity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Floor.h">
+      <Filter>src\Node</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
