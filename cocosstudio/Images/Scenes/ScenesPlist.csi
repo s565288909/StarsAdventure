@@ -6,6 +6,6 @@
       <FilePathData Path="Images/Scenes/bottombg.png" />
       <FilePathData Path="Images/Scenes/floor_1.png" />
     </ImageFiles>
-    <MaxSize Width="1024" Height="1024" />
+    <MaxSize Width="2048" Height="1024" />
   </Content>
 </PlistInfoProjectFile>

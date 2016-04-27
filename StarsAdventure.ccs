@@ -34,6 +34,12 @@
             <Image Name="player_walk_2.png" />
             <Image Name="player_walk_3.png" />
           </Folder>
+          <Folder Name="Scenes">
+            <Image Name="block.png" />
+            <Image Name="bottombg.png" />
+            <Image Name="floor_1.png" />
+            <PlistInfo Name="ScenesPlist.csi" Type="Plist" />
+          </Folder>
           <Folder Name="UI">
             <Image Name="attack_1.png" />
             <Image Name="attack_2.png" />
@@ -47,17 +53,11 @@
             <Image Name="skill_2.png" />
             <PlistInfo Name="UIPlist.csi" Type="Plist" />
           </Folder>
-          <Folder Name="Scenes">
-            <Image Name="block.png" />
-            <Image Name="bottombg.png" />
-            <Image Name="floor_1.png" />
-            <PlistInfo Name="ScenesPlist.csi" Type="Plist" />
-          </Folder>
         </Folder>
         <Folder Name="Node">
+          <Project Name="Floor.csd" Type="Node" />
           <Project Name="PlayerNode.csd" Type="Node" />
           <Project Name="UILayer.csd" Type="Layer" />
-          <Project Name="Floor.csd" Type="Node" />
         </Folder>
         <Folder Name="Scene">
           <Project Name="GameScene.csd" Type="Scene" />

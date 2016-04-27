@@ -29,11 +29,12 @@
       <Value ctype="TabsInfo">
         <OpenedDocuments>
           <FilePathData Path="MainScene.csd" />
-          <FilePathData Path="Scene/GameScene.csd" />
           <FilePathData Path="Node/PlayerNode.csd" />
           <FilePathData Path="Node/UILayer.csd" />
+          <FilePathData Path="Images/Scenes/ScenesPlist.csi" />
+          <FilePathData Path="Node/Floor.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Scene/GameScene.csd" />
+        <ActiveDocument Path="Node/Floor.csd" />
       </Value>
     </Item>
   </Properties>

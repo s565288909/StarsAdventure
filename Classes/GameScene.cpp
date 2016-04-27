@@ -1,7 +1,6 @@
 #include "GameScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
-#include "Floor.h"
 
 USING_NS_CC;
 using namespace ui;
@@ -29,6 +28,8 @@ bool GameScene::init(){
 		return false;
 	}
     moveL = moveR = false;
+	level = 1;
+	floorsNum = 8;
     
     auto whitelayer = CCLayerColor::create(ccc4(255, 251, 240, 255));
     this->addChild(whitelayer);
@@ -39,6 +40,8 @@ bool GameScene::init(){
 	player = Player::Create(rootnode->getChildByName("Player"));
 
 	n_GameUI = rootnode->getChildByName("UILayer");
+
+	genFloors();
 
 	auto bt_Left = (Button*)n_GameUI->getChildByName("Bt_Left");
 	auto bt_Right = (Button*)n_GameUI->getChildByName("Bt_Right");
@@ -63,7 +66,14 @@ void GameScene::update(float delta){
 }
 
 void GameScene::genFloors(){
-	Floor floor = CSLoader::createNode("Node/Floor.csb");
+	for (int i = 0; i < floorsNum; i++)
+	{
+		Floor* floor = (Floor*)CSLoader::createNode("Node/Floor.csb");
+		floor->setName("Floor");
+		floor->setPosition(0, 106 * (floorsNum+1));
+		floor->setZOrder(50 + floorsNum);
+		this->addChild(floor);	
+	}
 }
 
 void GameScene::setAllZOrders()

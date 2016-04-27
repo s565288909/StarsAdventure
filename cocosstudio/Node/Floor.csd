@@ -6,7 +6,7 @@
       <ObjectData Name="Node" Tag="30" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="floor_1_5" ActionTag="-2076905369" Tag="42" IconVisible="False" LeftMargin="2.8814" RightMargin="-167.8814" TopMargin="-214.7514" BottomMargin="-21.2486" ctype="SpriteObjectData">
+          <AbstractNodeData Name="wall_1" ActionTag="-2076905369" Tag="42" IconVisible="False" LeftMargin="2.8814" RightMargin="-167.8814" TopMargin="-214.7514" BottomMargin="-21.2486" ctype="SpriteObjectData">
             <Size X="165.0000" Y="236.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="85.3814" Y="96.7514" />
@@ -28,7 +28,7 @@
             <FileData Type="MarkedSubImage" Path="Images/Scenes/block.png" Plist="Images/Scenes/ScenesPlist.plist" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="floor_1_7" ActionTag="1304401684" Tag="44" IconVisible="False" LeftMargin="968.3999" RightMargin="-1133.3999" TopMargin="-214.7514" BottomMargin="-21.2486" ctype="SpriteObjectData">
+          <AbstractNodeData Name="wall_2" ActionTag="1304401684" Tag="44" IconVisible="False" LeftMargin="968.3999" RightMargin="-1133.3999" TopMargin="-214.7514" BottomMargin="-21.2486" ctype="SpriteObjectData">
             <Size X="165.0000" Y="236.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="1050.8999" Y="96.7514" />

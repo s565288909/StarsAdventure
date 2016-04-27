@@ -2,6 +2,7 @@
 
 #include "cocos2d.h"
 #include "Player.h"
+#include "Floor.h"
 
 class GameScene : public cocos2d::Layer
 {
@@ -22,6 +23,9 @@ private:
 	Player* player;
   
     bool moveL,moveR;
+
+	int level;
+	int floorsNum;
 
 	void genFloors();
 	void setAllZOrders();
