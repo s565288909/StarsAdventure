@@ -27,7 +27,7 @@ private:
 	int level;
 	int floorsNum;
 
-	void genFloors();
+	void genFloors(cocos2d::Node* node);
 	void setAllZOrders();
 
     void BtLeftOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);

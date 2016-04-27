@@ -6,8 +6,8 @@ class Floor : public cocos2d::Node{
 public:
 	Floor();
 	~Floor();
-	getWalls();
+	cocos2d::Vector<cocos2d::Rect> getWalls();
 	
 private:
-	cocos2d::Vector<Rect> rects;
+    cocos2d::Vector<cocos2d::Rect> wallRects;
 };

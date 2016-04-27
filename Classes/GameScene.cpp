@@ -41,7 +41,9 @@ bool GameScene::init(){
 
 	n_GameUI = rootnode->getChildByName("UILayer");
 
-	genFloors();
+	genFloors(rootnode);
+    
+    setAllZOrders();
 
 	auto bt_Left = (Button*)n_GameUI->getChildByName("Bt_Left");
 	auto bt_Right = (Button*)n_GameUI->getChildByName("Bt_Right");
@@ -65,14 +67,19 @@ void GameScene::update(float delta){
     }
 }
 
-void GameScene::genFloors(){
+void GameScene::genFloors(Node* node){
+//    Floor* floor = (Floor*)CSLoader::createNode("Node/Floor.csb");
+//    floor->setName("Floor");
+//    floor->setPosition(0, 103);
+//    this->addChild(floor);
 	for (int i = 0; i < floorsNum; i++)
 	{
 		Floor* floor = (Floor*)CSLoader::createNode("Node/Floor.csb");
-		floor->setName("Floor");
-		floor->setPosition(0, 106 * (floorsNum+1));
+        
+		floor->setName("Floor_"+Value(i+1).asString());
+		floor->setPosition(0, 103 + 236*0.8f*i);
 		floor->setZOrder(50 + floorsNum);
-		this->addChild(floor);	
+		node->addChild(floor);
 	}
 }
 

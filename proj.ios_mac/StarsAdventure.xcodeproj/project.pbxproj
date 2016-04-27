@@ -61,6 +61,8 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		F5873B0D1CD101D100139478 /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5873B0B1CD101D100139478 /* Floor.cpp */; };
+		F5873B0E1CD101D100139478 /* Floor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5873B0B1CD101D100139478 /* Floor.cpp */; };
 		F5ACDD451CC6806200FAF6F3 /* Enity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */; };
 		F5ACDD461CC6806200FAF6F3 /* Enity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */; };
 		F5ACDD471CC6806200FAF6F3 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */; };
@@ -129,6 +131,8 @@
 		E6BC457AB2ABD9A38B6F5AD7 /* res */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = res; path = ../Resources/res; sourceTree = "<group>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F5873B0B1CD101D100139478 /* Floor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Floor.cpp; sourceTree = "<group>"; };
+		F5873B0C1CD101D100139478 /* Floor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Floor.h; sourceTree = "<group>"; };
 		F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enity.cpp; sourceTree = "<group>"; };
 		F5ACDD3E1CC6806200FAF6F3 /* Enity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enity.h; sourceTree = "<group>"; };
 		F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
@@ -267,6 +271,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F5873B0B1CD101D100139478 /* Floor.cpp */,
+				F5873B0C1CD101D100139478 /* Floor.h */,
 				F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */,
 				F5ACDD3E1CC6806200FAF6F3 /* Enity.h */,
 				F5ACDD3F1CC6806200FAF6F3 /* GameScene.cpp */,
@@ -455,6 +461,7 @@
 				F5ACDD451CC6806200FAF6F3 /* Enity.cpp in Sources */,
 				F5ACDD471CC6806200FAF6F3 /* GameScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				F5873B0D1CD101D100139478 /* Floor.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +474,7 @@
 				F5ACDD4C1CC6806200FAF6F3 /* Player.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				F5873B0E1CD101D100139478 /* Floor.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				F5ACDD461CC6806200FAF6F3 /* Enity.cpp in Sources */,
 				F5ACDD4A1CC6806200FAF6F3 /* GameUI.cpp in Sources */,
