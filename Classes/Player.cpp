@@ -51,6 +51,16 @@ void Player::initData(){
 	m_State = State::Idle;
 }
 
+Node* Player::getNowNode(){
+	switch (m_Dir)
+	{
+	case Enity::Left:
+		return leftNode;
+	case Enity::Right:
+		return rightNode;
+	}
+}
+
 void Player::MoveLeft()
 {
     if (m_State==State::Idle) {
@@ -106,4 +116,16 @@ void Player::Attack()
         m_State = State::Jump;
     }
 
+}
+
+void Player::RestoreMove(){
+	switch (m_Dir)
+	{
+	case Enity::Left:
+		m_Node->setPositionX(m_Node->getPositionX() + moveSpeed);
+		break;
+	case Enity::Right:
+		m_Node->setPositionX(m_Node->getPositionX() - moveSpeed);
+		break;
+	}
 }

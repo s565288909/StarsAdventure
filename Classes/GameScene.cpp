@@ -1,4 +1,4 @@
-#include "GameScene.h"
+ï»¿#include "GameScene.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 
@@ -41,7 +41,10 @@ bool GameScene::init(){
 
 	n_GameUI = rootnode->getChildByName("UILayer");
 
-	genFloors(rootnode);
+	m_floorsNode = Node::create();
+
+	genFloors(m_floorsNode);
+	rootnode->addChild(m_floorsNode);
     
     setAllZOrders();
 
@@ -65,6 +68,8 @@ void GameScene::update(float delta){
     }else if (moveR){
         player->MoveRight();
     }
+	collisionWithFloors();
+
 }
 
 void GameScene::genFloors(Node* node){
@@ -78,20 +83,34 @@ void GameScene::genFloors(Node* node){
         
 		floor->setName("Floor_"+Value(i+1).asString());
 		floor->setPosition(0, 103 + 236*0.8f*i);
-		floor->setZOrder(50 + floorsNum);
+		floor->setZOrder(floorsNum);
 		node->addChild(floor);
 	}
 }
 
 void GameScene::setAllZOrders()
 {
-	//ÈËÎïµÈZorderÖµ:10-49
-	//FloorµÄZorderÖµ£º50-99
-	//³¡¾°µÄUILayerµÈ£º100-
+	//äººç‰©ç­‰Zorderå€¼:10-49
+	//Floorçš„Zorderå€¼ï¼š50-99
+	//åœºæ™¯çš„UILayerç­‰ï¼š100- 
 	player->getNode()->setZOrder(10);
 
-	n_GameUI->setZOrder(100);
+	m_floorsNode->setZOrder(50);
 
+	n_GameUI->setZOrder(100);
+}
+
+void GameScene::collisionWithFloors(){
+	//collision with walls
+	for (auto floornode : m_floorsNode->getChildren())
+	{
+		for ( auto rect : ((Floor*)floornode)->getWallsRects() )
+		{
+			if (player->getNowNode()->getBoundingBox().intersectsRect(rect)) player->RestoreMove();
+		}
+	}
+	//collision with blocks
+	
 }
 
 void GameScene::BtLeftOnTouch(Ref *pSender, Widget::TouchEventType type)

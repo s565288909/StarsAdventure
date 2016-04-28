@@ -27,6 +27,7 @@ protected:
 		Walk,
 		Jump,
 		Die,
-		Attack
+		Attack,
+		Drop
 	} m_State;
 };

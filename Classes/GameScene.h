@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "cocos2d.h"
 #include "Player.h"
@@ -19,16 +19,20 @@ public:
 	CREATE_FUNC(GameScene);
 
 private:
+	//UI's Node
 	cocos2d::Node* n_GameUI;
+	//Floors's Node
+	cocos2d::Node* m_floorsNode;
 	Player* player;
-  
+	//Is Player Moved left or right
     bool moveL,moveR;
-
+	//Now Level
 	int level;
 	int floorsNum;
 
 	void genFloors(cocos2d::Node* node);
 	void setAllZOrders();
+	void collisionWithFloors();
 
     void BtLeftOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
     void BtRightOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
