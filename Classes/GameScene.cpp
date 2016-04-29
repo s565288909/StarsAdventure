@@ -102,13 +102,15 @@ void GameScene::setAllZOrders()
 
 void GameScene::collisionWithFloors(){
 	//collision with walls
-	for (auto floornode : m_floorsNode->getChildren())
-	{
-		for ( auto rect : ((Floor*)floornode)->getWallsRects() )
-		{
-			if (player->getNowNode()->getBoundingBox().intersectsRect(rect)) player->RestoreMove();
-		}
-	}
+
+	//for (auto floornode : m_floorsNode->getChildren())
+	//{
+	//	for ( auto rect : ((Floor*)floornode)->getWallsRects() )
+	//	{
+	//		if (player->getNowNode()->getBoundingBox().intersectsRect(rect)) player->RestoreMove();
+	//	}
+	//}
+
 	//collision with blocks
 	
 }

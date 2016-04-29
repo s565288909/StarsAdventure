@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>Images/Floor/block.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,552},{64,49}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{64,49}</string>
+			</dict>
+			<key>Images/Floor/board.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,220},{183,113}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{183,113}</string>
+			</dict>
+			<key>Images/Floor/house.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,1},{173,217}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{173,217}</string>
+			</dict>
+			<key>Images/Floor/househole.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,405},{66,145}}</string>
+				<key>offset</key>
+				<string>{53,-36}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{173,217}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>FloorPlist.png</string>
+			<key>realTextureFileName</key>
+			<string>FloorPlist.png</string>
+			<key>size</key>
+			<string>{256,1024}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>256</integer>
+			<key>height</key>
+			<integer>1024</integer>
+		</dict>
+	</dict>
+</plist>

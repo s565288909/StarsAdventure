@@ -6,6 +6,17 @@
       <ObjectData Name="Scene" Tag="3" ctype="GameNodeObjectData">
         <Size X="1136.0000" Y="640.0000" />
         <Children>
+          <AbstractNodeData Name="gamebg" ActionTag="348686360" Tag="23" IconVisible="False" TopMargin="-856.0000" ctype="SpriteObjectData">
+            <Size X="1136.0000" Y="1496.0000" />
+            <AnchorPoint />
+            <Position />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="1.0000" Y="2.3375" />
+            <FileData Type="Normal" Path="Images/Floor/gamebg.png" Plist="" />
+            <BlendFunc Src="770" Dst="771" />
+          </AbstractNodeData>
           <AbstractNodeData Name="BottomBg" ActionTag="1930092310" Tag="41" IconVisible="False" TopMargin="494.0000" ctype="SpriteObjectData">
             <Size X="1136.0000" Y="146.0000" />
             <AnchorPoint />

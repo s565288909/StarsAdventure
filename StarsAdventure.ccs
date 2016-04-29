@@ -4,6 +4,10 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="Images">
+          <Folder Name="Menu">
+            <Image Name="bg.png" />
+            <Image Name="startbt.png" />
+          </Folder>
           <Folder Name="Player">
             <PlistInfo Name="Player.csi" Type="Plist" />
             <Image Name="player_attack_1.png" />
@@ -53,6 +57,14 @@
             <Image Name="skill_2.png" />
             <PlistInfo Name="UIPlist.csi" Type="Plist" />
           </Folder>
+          <Folder Name="Floor">
+            <Image Name="block.png" />
+            <Image Name="board.png" />
+            <Image Name="gamebg.png" />
+            <Image Name="house.png" />
+            <Image Name="househole.png" />
+            <PlistInfo Name="FloorPlist.csi" Type="Plist" />
+          </Folder>
         </Folder>
         <Folder Name="Node">
           <Project Name="Floor.csd" Type="Node" />
@@ -61,6 +73,7 @@
         </Folder>
         <Folder Name="Scene">
           <Project Name="GameScene.csd" Type="Scene" />
+          <Project Name="MenuScene.csd" Type="Scene" />
         </Folder>
         <Image Name="HelloWorld.png" />
         <Project Name="MainScene.csd" Type="Scene" />

@@ -1,0 +1,12 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="FloorPlist" Type="Plist" ID="d0177f26-5139-4ac6-a7c4-2324bcd0db9f" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="False" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Images/Floor/block.png" />
+      <FilePathData Path="Images/Floor/board.png" />
+      <FilePathData Path="Images/Floor/house.png" />
+      <FilePathData Path="Images/Floor/househole.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
