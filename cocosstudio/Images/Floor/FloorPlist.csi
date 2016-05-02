@@ -6,6 +6,7 @@
       <FilePathData Path="Images/Floor/board.png" />
       <FilePathData Path="Images/Floor/house.png" />
       <FilePathData Path="Images/Floor/househole.png" />
+      <FilePathData Path="Images/Floor/empty.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

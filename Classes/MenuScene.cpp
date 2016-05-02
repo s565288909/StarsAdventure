@@ -26,12 +26,20 @@ bool MenuScene::init()
 	}
 	auto rootnode = CSLoader::createNode("Scene/MenuScene.csb");
 	this->addChild(rootnode);
+    
+    //通过csb创建动画
+    ActionTimeline *action = CSLoader::createTimeline("Scene/MenuScene.csb");
+    rootnode->runAction(action);
+    
+    //同一个文件创建的节点只能使用同一个文件创建的动画。
+    //从第0帧循环播放动画
+    action->gotoFrameAndPlay(0,true);
 
 	auto strBt = (Button*)rootnode->getChildByName("startbt");
 	
-	strBt->addTouchEventListener([&]{
-		SceneManager::getInstance()->changeScene(SceneManager::GameScene);
-	});
+    strBt->addClickEventListener([](Ref* ref){
+        SceneManager::getInstance()->changeScene(SceneManager::GameScene);
+    });
 
 	return true;
 }

@@ -33,12 +33,12 @@
             <Size X="221.0000" Y="21.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="583.0000" Y="62.0000" />
-            <Scale ScaleX="1.0067" ScaleY="1.0067" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5132" Y="0.0969" />
             <PreSize X="0.1945" Y="0.0328" />
             <TextColor A="255" R="65" G="65" B="70" />
-            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <DisabledFileData Type="Normal" Path="Images/Menu/startbt.png" Plist="" />
             <PressedFileData Type="Normal" Path="Images/Menu/startbt.png" Plist="" />
             <NormalFileData Type="Normal" Path="Images/Menu/startbt.png" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />

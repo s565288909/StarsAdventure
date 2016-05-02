@@ -71,6 +71,10 @@
 		F5ACDD4A1CC6806200FAF6F3 /* GameUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD411CC6806200FAF6F3 /* GameUI.cpp */; };
 		F5ACDD4B1CC6806200FAF6F3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD431CC6806200FAF6F3 /* Player.cpp */; };
 		F5ACDD4C1CC6806200FAF6F3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ACDD431CC6806200FAF6F3 /* Player.cpp */; };
+		F5ED6F291CD4534F00D24A3A /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ED6F251CD4534F00D24A3A /* MenuScene.cpp */; };
+		F5ED6F2A1CD4534F00D24A3A /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ED6F251CD4534F00D24A3A /* MenuScene.cpp */; };
+		F5ED6F2B1CD4534F00D24A3A /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ED6F271CD4534F00D24A3A /* SceneManager.cpp */; };
+		F5ED6F2C1CD4534F00D24A3A /* SceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5ED6F271CD4534F00D24A3A /* SceneManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,6 +145,11 @@
 		F5ACDD421CC6806200FAF6F3 /* GameUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUI.h; sourceTree = "<group>"; };
 		F5ACDD431CC6806200FAF6F3 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
 		F5ACDD441CC6806200FAF6F3 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		F5ED6F251CD4534F00D24A3A /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuScene.cpp; sourceTree = "<group>"; };
+		F5ED6F261CD4534F00D24A3A /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		F5ED6F271CD4534F00D24A3A /* SceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneManager.cpp; sourceTree = "<group>"; };
+		F5ED6F281CD4534F00D24A3A /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
+		F5ED6F2D1CD659D300D24A3A /* DefineUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineUtils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +280,10 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F5ED6F251CD4534F00D24A3A /* MenuScene.cpp */,
+				F5ED6F261CD4534F00D24A3A /* MenuScene.h */,
+				F5ED6F271CD4534F00D24A3A /* SceneManager.cpp */,
+				F5ED6F281CD4534F00D24A3A /* SceneManager.h */,
 				F5873B0B1CD101D100139478 /* Floor.cpp */,
 				F5873B0C1CD101D100139478 /* Floor.h */,
 				F5ACDD3D1CC6806200FAF6F3 /* Enity.cpp */,
@@ -285,6 +298,7 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				F5ED6F2D1CD659D300D24A3A /* DefineUtils.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -455,6 +469,8 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				F5ED6F2B1CD4534F00D24A3A /* SceneManager.cpp in Sources */,
+				F5ED6F291CD4534F00D24A3A /* MenuScene.cpp in Sources */,
 				F5ACDD4B1CC6806200FAF6F3 /* Player.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				F5ACDD491CC6806200FAF6F3 /* GameUI.cpp in Sources */,
@@ -474,9 +490,11 @@
 				F5ACDD4C1CC6806200FAF6F3 /* Player.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				F5ED6F2C1CD4534F00D24A3A /* SceneManager.cpp in Sources */,
 				F5873B0E1CD101D100139478 /* Floor.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				F5ACDD461CC6806200FAF6F3 /* Enity.cpp in Sources */,
+				F5ED6F2A1CD4534F00D24A3A /* MenuScene.cpp in Sources */,
 				F5ACDD4A1CC6806200FAF6F3 /* GameUI.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

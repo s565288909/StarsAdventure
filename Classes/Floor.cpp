@@ -6,10 +6,10 @@ Floor::Floor(){}
 
 Floor::~Floor(){}
 
-Vector<Rect> Floor::getWallsRects(){
-    Vector<Rect> vec;
-    vec.pushBack(this->getChildByName("wall_1")->getBoundingBox());
-    vec.pushBack(this->getChildByName("wall_2")->getBoundingBox());
+std::vector<Rect> Floor::getBoardsRects(){
+    std::vector<Rect> vec;
+    vec.push_back(this->getChildByName("board_1")->getBoundingBox());
+    vec.push_back(this->getChildByName("board_2")->getBoundingBox());
     return vec;
 }
 

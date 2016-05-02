@@ -9,14 +9,25 @@ class Player : public Enity
 public:
 	Player();
 	~Player();
+    enum State
+    {
+        Idle,
+        Walk,
+        JumpUp,
+        JumpDown,
+        Die,
+        Attack,
+        Drop
+    } m_State;
 	void initData();
 	static Player* Create(cocos2d::Node* node);
 	cocos2d::Node* getNowNode();
+    void KeepIdle();
     void MoveLeft();
     void MoveRight();
     void StopMove();
-    void Attack();
-    void Jump();
+    void Attacks();
+    void Jumps(bool isDrop);
     void Dead();
 	//碰撞后恢复移动的位置偏移
 	void RestoreMove();

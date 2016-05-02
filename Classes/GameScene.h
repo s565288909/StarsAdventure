@@ -23,6 +23,8 @@ private:
 	cocos2d::Node* n_GameUI;
 	//Floors's Node
 	cocos2d::Node* m_floorsNode;
+    //Bottom's Node
+    cocos2d::Node* m_bottomNode;
 	Player* player;
 	//Is Player Moved left or right
     bool moveL,moveR;

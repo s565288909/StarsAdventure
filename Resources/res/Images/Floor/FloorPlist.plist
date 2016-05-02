@@ -48,6 +48,17 @@
 				<key>sourceSize</key>
 				<string>{173,217}</string>
 			</dict>
+			<key>Images/Floor/empty.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{1,618},{1,1}}</string>
+				<key>offset</key>
+				<string>{4,-4}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{10,10}</string>
+			</dict>
 		</dict>
 		<key>metadata</key>
 		<dict>

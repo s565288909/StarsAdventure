@@ -4,6 +4,15 @@
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
         <Folder Name="Images">
+          <Folder Name="Floor">
+            <Image Name="block.png" />
+            <Image Name="board.png" />
+            <Image Name="empty.png" />
+            <PlistInfo Name="FloorPlist.csi" Type="Plist" />
+            <Image Name="gamebg.png" />
+            <Image Name="house.png" />
+            <Image Name="househole.png" />
+          </Folder>
           <Folder Name="Menu">
             <Image Name="bg.png" />
             <Image Name="startbt.png" />
@@ -38,12 +47,6 @@
             <Image Name="player_walk_2.png" />
             <Image Name="player_walk_3.png" />
           </Folder>
-          <Folder Name="Scenes">
-            <Image Name="block.png" />
-            <Image Name="bottombg.png" />
-            <Image Name="floor_1.png" />
-            <PlistInfo Name="ScenesPlist.csi" Type="Plist" />
-          </Folder>
           <Folder Name="UI">
             <Image Name="attack_1.png" />
             <Image Name="attack_2.png" />
@@ -57,26 +60,17 @@
             <Image Name="skill_2.png" />
             <PlistInfo Name="UIPlist.csi" Type="Plist" />
           </Folder>
-          <Folder Name="Floor">
-            <Image Name="block.png" />
-            <Image Name="board.png" />
-            <Image Name="gamebg.png" />
-            <Image Name="house.png" />
-            <Image Name="househole.png" />
-            <PlistInfo Name="FloorPlist.csi" Type="Plist" />
-          </Folder>
         </Folder>
         <Folder Name="Node">
           <Project Name="Floor.csd" Type="Node" />
           <Project Name="PlayerNode.csd" Type="Node" />
           <Project Name="UILayer.csd" Type="Layer" />
+          <Project Name="FirstFloor.csd" Type="Node" />
         </Folder>
         <Folder Name="Scene">
           <Project Name="GameScene.csd" Type="Scene" />
           <Project Name="MenuScene.csd" Type="Scene" />
         </Folder>
-        <Image Name="HelloWorld.png" />
-        <Project Name="MainScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>

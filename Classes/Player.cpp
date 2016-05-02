@@ -1,5 +1,5 @@
 #include "Player.h"
-
+#include "DefineUtils.h"
 
 USING_NS_CC;
 using namespace cocostudio;
@@ -61,6 +61,12 @@ Node* Player::getNowNode(){
 	}
 }
 
+void Player::KeepIdle(){
+    this->getNode()->stopAllActions();
+    m_action->play("P_Idle", true);
+    m_State = State::Idle;
+}
+
 void Player::MoveLeft()
 {
     if (m_State==State::Idle) {
@@ -94,26 +100,34 @@ void Player::StopMove(){
     m_State = State::Idle;
 }
 
-void Player::Jump(){
-    if (m_State!=State::Jump && m_State!=State::Attack) {
+void Player::Jumps(bool isDrop){
+    if (m_State!=State::JumpUp && m_State!=State::JumpDown && m_State!=State::Attack) {
         m_action->play("P_Jump", false);
-        m_action->setAnimationEndCallFunc("P_Jump", [&]{
-            m_action->play("P_Idle", true);
-            m_State = State::Idle;
-        });
+//        m_action->setAnimationEndCallFunc("P_Jump", [&]{
+//            m_action->play("P_Idle", true);
+//            m_State = State::Idle;
+//        });
+        if (isDrop) {
+            auto movedown = JumpDownAction;
+            m_Node->runAction(movedown);
+        }
+        else{
+            auto moveup = JumpUpAction;
+            m_Node->runAction(moveup);
+        }
     }
 }
 
-void Player::Attack()
+void Player::Attacks()
 {
-    if (m_State!=State::Jump) {
+    if (m_State!=State::JumpUp && m_State!=State::JumpDown) {
         m_action->play("P_Attack", false);
         
         m_action->setAnimationEndCallFunc("P_Attack", [&]{
             m_action->play("P_Idle", true);
             m_State = State::Idle;
         });
-        m_State = State::Jump;
+        m_State = State::Attack;
     }
 
 }

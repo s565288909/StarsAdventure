@@ -14,20 +14,10 @@ protected:
 	int HP;
 	int MP;
 	bool isDead;
-	//Enity方向的枚举
+
 	enum Dir
 	{
 		Left,
 		Right
 	} m_Dir;
-	//Entiy的状态枚举
-	enum State
-	{
-		Idle,
-		Walk,
-		Jump,
-		Die,
-		Attack,
-		Drop
-	} m_State;
 };

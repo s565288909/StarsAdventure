@@ -31,15 +31,19 @@ bool GameScene::init(){
 	level = 1;
 	floorsNum = 8;
     
-    auto whitelayer = CCLayerColor::create(ccc4(255, 251, 240, 255));
-    this->addChild(whitelayer);
+//    auto whitelayer = CCLayerColor::create(ccc4(255, 251, 240, 255));
+//    this->addChild(whitelayer);
     
 	auto rootnode = CSLoader::createNode("Scene/GameScene.csb");
 	this->addChild(rootnode);
+    rootnode->getChildByName("gamebg")->setGlobalZOrder(-10);
+    CCLOG("%f",rootnode->getChildByName("gamebg")->getGlobalZOrder());
 
 	player = Player::Create(rootnode->getChildByName("Player"));
 
 	n_GameUI = rootnode->getChildByName("UILayer");
+    
+    m_bottomNode = rootnode->getChildByName("BottomBg");
 
 	m_floorsNode = Node::create();
 
@@ -69,21 +73,22 @@ void GameScene::update(float delta){
         player->MoveRight();
     }
 	collisionWithFloors();
-
 }
 
 void GameScene::genFloors(Node* node){
-//    Floor* floor = (Floor*)CSLoader::createNode("Node/Floor.csb");
-//    floor->setName("Floor");
-//    floor->setPosition(0, 103);
-//    this->addChild(floor);
-	for (int i = 0; i < floorsNum; i++)
+    Floor* firstFloor = (Floor*)CSLoader::createNode("Node/FirstFloor.csb");
+    firstFloor->setName("FirstFloor");
+    firstFloor->setPosition(0,135);
+    firstFloor->setZOrder(0);
+    node->addChild(firstFloor);
+	for (int i = 0; i < floorsNum-1; i++)
 	{
 		Floor* floor = (Floor*)CSLoader::createNode("Node/Floor.csb");
-        
 		floor->setName("Floor_"+Value(i+1).asString());
-		floor->setPosition(0, 103 + 236*0.8f*i);
-		floor->setZOrder(floorsNum);
+		floor->setPosition(0, 135 + 279*(i+1));
+		floor->setZOrder(i+1);
+        floor->getChildByName("househole_1")->setGlobalZOrder(-5);
+        floor->getChildByName("househole_2")->setGlobalZOrder(-5);
 		node->addChild(floor);
 	}
 }
@@ -101,6 +106,44 @@ void GameScene::setAllZOrders()
 }
 
 void GameScene::collisionWithFloors(){
+    //collison with bottom
+    auto playerRect = player->getNowNode()->getBoundingBox();
+    auto bottomRect = m_bottomNode->getBoundingBox();
+    if (player->m_State == Player::State::Walk) {
+        if (playerRect.intersectsRect(bottomRect)) {
+            if (player->m_State != Player::State::Idle) {
+                player->KeepIdle();
+            }
+        }
+        else{
+            for (auto floornode: m_floorsNode->getChildren()) {
+                for ( auto rect : ((Floor*)floornode)->getBoardsRects() )
+                {
+                    if (playerRect.intersectsRect(rect)) player->Jumps(true);
+                }
+            }
+            if (player->m_State != Player::State::Idle) {
+                player->KeepIdle();
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    if (!playerRect.intersectsRect(bottomRect)) {
+        player->Jumps(true);
+    }
+    else{
+        for (auto floornode: m_floorsNode->getChildren()) {
+            
+        }
+        if (player->m_State != Player::State::Idle) {
+            player->KeepIdle();
+        }
+    }
+    
 	//collision with walls
 
 	//for (auto floornode : m_floorsNode->getChildren())
@@ -162,9 +205,9 @@ void GameScene::BtRightOnTouch(Ref *pSender, Widget::TouchEventType type)
 }
 
 void GameScene::BtAttackOnClick(Ref *pSender){
-    player->Attack();
+    player->Attacks();
 }
 
 void GameScene::BtJumpOnClick(Ref *pSender){
-    player->Jump();
+    player->Jumps(false);
 }
