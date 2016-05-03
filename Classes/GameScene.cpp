@@ -157,7 +157,11 @@ void GameScene::collisionWithFloors(){
 			for (auto blockSprite : ((Floor*)floornode)->getBlocksSprites())
 			{
 				if (player->getDropRect().intersectsRect(blockSprite->getBoundingBox())){
-					if (player)
+					if (player->m_State == Player::State::Idle || player->m_State == Player::State::Walk)
+					{
+
+					}
+					else if (player->m_State == Player::State::JumpUp)
 					{
 
 					}

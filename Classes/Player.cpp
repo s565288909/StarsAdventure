@@ -116,6 +116,9 @@ void Player::Jumps(bool isDrop){
 			m_Node->runAction(JumpDownAction);
         }
         else{
+			auto action = Sequence::create(JumpUpAction, CallFunc::create([&]{
+				
+			}), NULL);
 			m_Node->runAction(Sequence::create(JumpUpAction, JumpDownAction));
         }
     }
