@@ -62,10 +62,10 @@
           </Folder>
         </Folder>
         <Folder Name="Node">
+          <Project Name="FirstFloor.csd" Type="Node" />
           <Project Name="Floor.csd" Type="Node" />
           <Project Name="PlayerNode.csd" Type="Node" />
           <Project Name="UILayer.csd" Type="Layer" />
-          <Project Name="FirstFloor.csd" Type="Node" />
         </Folder>
         <Folder Name="Scene">
           <Project Name="GameScene.csd" Type="Scene" />

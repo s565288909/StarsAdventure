@@ -61,6 +61,10 @@ Node* Player::getNowNode(){
 	}
 }
 
+Rect Player::getDropRect(){
+	return Rect(m_Node->getPositionX() - m_Node->getContentSize().width / 4, m_Node->getPositionY() - m_Node->getContentSize().height / 2, m_Node->getContentSize().width / 2, m_Node->getContentSize().height);
+}
+
 void Player::KeepIdle(){
     this->getNode()->stopAllActions();
     m_action->play("P_Idle", true);
@@ -108,12 +112,11 @@ void Player::Jumps(bool isDrop){
 //            m_State = State::Idle;
 //        });
         if (isDrop) {
-            auto movedown = JumpDownAction;
-            m_Node->runAction(movedown);
+			m_State = State::JumpDown;
+			m_Node->runAction(JumpDownAction);
         }
         else{
-            auto moveup = JumpUpAction;
-            m_Node->runAction(moveup);
+			m_Node->runAction(Sequence::create(JumpUpAction, JumpDownAction));
         }
     }
 }

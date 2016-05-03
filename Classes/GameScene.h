@@ -30,10 +30,14 @@ private:
     bool moveL,moveR;
 	//Now Level
 	int level;
+	//当前所在floor层数
+	int floorNowNum;
+	//floors 总层数
 	int floorsNum;
 
 	void genFloors(cocos2d::Node* node);
 	void setAllZOrders();
+	void checkNowFloor();
 	void collisionWithFloors();
 
     void BtLeftOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);

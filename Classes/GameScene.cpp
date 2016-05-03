@@ -30,6 +30,7 @@ bool GameScene::init(){
     moveL = moveR = false;
 	level = 1;
 	floorsNum = 8;
+	floorNowNum = 1;
     
 //    auto whitelayer = CCLayerColor::create(ccc4(255, 251, 240, 255));
 //    this->addChild(whitelayer);
@@ -72,19 +73,20 @@ void GameScene::update(float delta){
     }else if (moveR){
         player->MoveRight();
     }
+	checkNowFloor();
 	collisionWithFloors();
 }
 
 void GameScene::genFloors(Node* node){
     Floor* firstFloor = (Floor*)CSLoader::createNode("Node/FirstFloor.csb");
-    firstFloor->setName("FirstFloor");
+    firstFloor->setName("Floor_1");
     firstFloor->setPosition(0,135);
     firstFloor->setZOrder(0);
     node->addChild(firstFloor);
 	for (int i = 0; i < floorsNum-1; i++)
 	{
 		Floor* floor = (Floor*)CSLoader::createNode("Node/Floor.csb");
-		floor->setName("Floor_"+Value(i+1).asString());
+		floor->setName("Floor_"+Value(i+2).asString());
 		floor->setPosition(0, 135 + 279*(i+1));
 		floor->setZOrder(i+1);
         floor->getChildByName("househole_1")->setGlobalZOrder(-5);
@@ -105,54 +107,65 @@ void GameScene::setAllZOrders()
 	n_GameUI->setZOrder(100);
 }
 
-void GameScene::collisionWithFloors(){
-    //collison with bottom
-    auto playerRect = player->getNowNode()->getBoundingBox();
-    auto bottomRect = m_bottomNode->getBoundingBox();
-    if (player->m_State == Player::State::Walk) {
-        if (playerRect.intersectsRect(bottomRect)) {
-            if (player->m_State != Player::State::Idle) {
-                player->KeepIdle();
-            }
-        }
-        else{
-            for (auto floornode: m_floorsNode->getChildren()) {
-                for ( auto rect : ((Floor*)floornode)->getBoardsRects() )
-                {
-                    if (playerRect.intersectsRect(rect)) player->Jumps(true);
-                }
-            }
-            if (player->m_State != Player::State::Idle) {
-                player->KeepIdle();
-            }
-        }
-    }
-    
-    
-    
-    
-    
-    if (!playerRect.intersectsRect(bottomRect)) {
-        player->Jumps(true);
-    }
-    else{
-        for (auto floornode: m_floorsNode->getChildren()) {
-            
-        }
-        if (player->m_State != Player::State::Idle) {
-            player->KeepIdle();
-        }
-    }
-    
-	//collision with walls
+void GameScene::checkNowFloor(){
+	int _floornum = 1;
+	for (auto floor : m_floorsNode->getChildren())
+	{
+		if (player->getNode()->getPositionY() > floor->getPositionY()+floor->getContentSize().height/2)
+		{
+			int _floornumTem = Value(floor->getName().substr(6, 7)).asInt;
+			if (_floornumTem > _floornum) _floornum = _floornumTem;
+		}
+	}
+	floorNowNum = _floornum;
+}
 
-	//for (auto floornode : m_floorsNode->getChildren())
-	//{
-	//	for ( auto rect : ((Floor*)floornode)->getWallsRects() )
-	//	{
-	//		if (player->getNowNode()->getBoundingBox().intersectsRect(rect)) player->RestoreMove();
-	//	}
-	//}
+void GameScene::collisionWithFloors(){
+    auto playerRect = player->getNowNode()->getBoundingBox();
+	auto bottomRect = m_bottomNode->getBoundingBox();
+	//collison with bottom
+	if ( floorNowNum==1 && (player->m_State == Player::State::Idle || player->m_State == Player::State::Walk) )
+	{
+        if (!playerRect.intersectsRect(bottomRect)) {
+			CCLog("jump");
+			player->Jumps(true);
+        }
+		//边界检测
+		if ( player->getNode()->getPositionX() - player->getNode()->getContentSize().width/2 < 0 )
+		{
+			player->getNode()->setPositionX(player->getNode()->getContentSize().width / 2);
+		}
+		else if (player->getNode()->getPositionX() + player->getNode()->getContentSize().width / 2 > m_bottomNode->getContentSize().width)
+		{
+			player->getNode()->setPositionX(m_bottomNode->getContentSize().width - player->getNode()->getContentSize().width / 2);
+		}
+    }
+	else if (floorNowNum == 1 && player->m_State == Player::State::JumpDown)
+	{
+		if (playerRect.intersectsRect(bottomRect)) {
+			player->getNode()->setPositionY(m_bottomNode->getPositionY() + m_bottomNode->getContentSize().height / 2 + player->getNode()->getContentSize().height/2);
+			player->KeepIdle();
+		}
+	}
+    
+	//collision with floors
+	for (auto floornode : m_floorsNode->getChildren())
+	{
+		int checknum = Value(floornode->getName().substr(6, 7)).asInt;
+		if (checknum == floorNowNum - 1 || checknum == floorNowNum || checknum == floorNowNum+1)
+		{
+			for (auto blockSprite : ((Floor*)floornode)->getBlocksSprites())
+			{
+				if (player->getDropRect().intersectsRect(blockSprite->getBoundingBox())){
+					if (player)
+					{
+
+					}
+				}
+			}
+		}
+
+	}
 
 	//collision with blocks
 	

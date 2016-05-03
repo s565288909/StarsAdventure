@@ -22,6 +22,7 @@ public:
 	void initData();
 	static Player* Create(cocos2d::Node* node);
 	cocos2d::Node* getNowNode();
+	cocos2d::Rect getDropRect();
     void KeepIdle();
     void MoveLeft();
     void MoveRight();
