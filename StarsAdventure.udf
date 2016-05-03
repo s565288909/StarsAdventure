@@ -20,17 +20,17 @@
     </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
-        <LastPublishType Value="VS" />
+        <LastPublishType Value="XCode" />
         <IsLastPublish Value="True" />
-        <LastRunType Value="Windows" />
+        <LastRunType Value="Mac" />
       </Value>
     </Item>
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="Node/PlayerNode.csd" />
           <FilePathData Path="Node/UILayer.csd" />
           <FilePathData Path="Scene/MenuScene.csd" />
+          <FilePathData Path="Node/PlayerNode.csd" />
         </OpenedDocuments>
         <ActiveDocument Path="Node/PlayerNode.csd" />
       </Value>

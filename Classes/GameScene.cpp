@@ -113,7 +113,7 @@ void GameScene::checkNowFloor(){
 	{
 		if (player->getNode()->getPositionY() > floor->getPositionY()+floor->getContentSize().height/2)
 		{
-			int _floornumTem = Value(floor->getName().substr(6, 7)).asInt;
+			int _floornumTem = Value(floor->getName().substr(6, 7)).asInt();
 			if (_floornumTem > _floornum) _floornum = _floornumTem;
 		}
 	}
@@ -124,20 +124,19 @@ void GameScene::collisionWithFloors(){
     auto playerRect = player->getNowNode()->getBoundingBox();
 	auto bottomRect = m_bottomNode->getBoundingBox();
 	//collison with bottom
-	if ( floorNowNum==1 && (player->m_State == Player::State::Idle || player->m_State == Player::State::Walk) )
+	if ( floorNowNum==1 )
 	{
-        if (!playerRect.intersectsRect(bottomRect)) {
-			CCLog("jump");
+        if (player->m_State != Player::State::JumpDown && player->m_State !=Player::State::JumpUp && !playerRect.intersectsRect(bottomRect)) {
 			player->Jumps(true);
         }
 		//边界检测
-		if ( player->getNode()->getPositionX() - player->getNode()->getContentSize().width/2 < 0 )
+		if ( player->getNode()->getPositionX() - playerRect.size.width/2 < 0 )
 		{
-			player->getNode()->setPositionX(player->getNode()->getContentSize().width / 2);
+			player->getNode()->setPositionX(playerRect.size.width/2);
 		}
-		else if (player->getNode()->getPositionX() + player->getNode()->getContentSize().width / 2 > m_bottomNode->getContentSize().width)
+		else if (player->getNode()->getPositionX() + playerRect.size.width/2 > bottomRect.size.width)
 		{
-			player->getNode()->setPositionX(m_bottomNode->getContentSize().width - player->getNode()->getContentSize().width / 2);
+			player->getNode()->setPositionX(bottomRect.size.width - playerRect.size.width/2);
 		}
     }
 	else if (floorNowNum == 1 && player->m_State == Player::State::JumpDown)
@@ -151,7 +150,7 @@ void GameScene::collisionWithFloors(){
 	//collision with floors
 	for (auto floornode : m_floorsNode->getChildren())
 	{
-		int checknum = Value(floornode->getName().substr(6, 7)).asInt;
+		int checknum = Value(floornode->getName().substr(6, 7)).asInt();
 		if (checknum == floorNowNum - 1 || checknum == floorNowNum || checknum == floorNowNum+1)
 		{
 			for (auto blockSprite : ((Floor*)floornode)->getBlocksSprites())
