@@ -62,7 +62,7 @@ Node* Player::getNowNode(){
 }
 
 Rect Player::getDropRect(){
-	return Rect(m_Node->getPositionX() - m_Node->getContentSize().width / 4, m_Node->getPositionY() - m_Node->getContentSize().height / 2, m_Node->getContentSize().width / 2, m_Node->getContentSize().height);
+	return Rect(m_Node->getPositionX() - getNowNode()->getBoundingBox().size.width / 4, m_Node->getPositionY() - getNowNode()->getBoundingBox().size.height / 2, getNowNode()->getBoundingBox().size.width / 2, getNowNode()->getBoundingBox().size.height);
 }
 
 void Player::KeepIdle(){

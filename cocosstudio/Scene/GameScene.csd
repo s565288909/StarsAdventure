@@ -28,13 +28,13 @@
             <FileData Type="MarkedSubImage" Path="Images/Floor/empty.png" Plist="Images/Floor/FloorPlist.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Player" ActionTag="1396539866" Tag="19" IconVisible="True" LeftMargin="544.8392" RightMargin="591.1608" TopMargin="437.1347" BottomMargin="202.8653" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="Player" ActionTag="1396539866" Tag="19" IconVisible="True" LeftMargin="544.8391" RightMargin="591.1609" TopMargin="443.5704" BottomMargin="196.4296" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="544.8392" Y="202.8653" />
+            <Position X="544.8391" Y="196.4296" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.4796" Y="0.3170" />
+            <PrePosition X="0.4796" Y="0.3069" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Node/PlayerNode.csd" Plist="" />
           </AbstractNodeData>

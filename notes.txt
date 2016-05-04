@@ -1,0 +1,14 @@
+20160503:
+getBoundingBox  中得 Size.width .height  显示图片真实大小 (考虑缩放和不缩放)
+getContentSize  纹理图片大小
+getTextureRect  当前的纹理在总纹理的位置 (不考虑 缩放不缩放)
+
+20160504:
+节点坐标系与世界坐标系
+convertToNodeSpace 与 convertToWorldSpace 
+
+砖块是floor一个子类，floor又是gamescene的子类，如何获取getboundbox()坐标准确位置。
+需要将节点坐标转换为世界坐标：
+auto m_blockPos = floornode->convertToWorldSpace(blockRect.origin);
+
+Node->getPosition()获取也是相对于节点Node的坐标，而不是世界坐标系
