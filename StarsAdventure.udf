@@ -33,8 +33,10 @@
           <FilePathData Path="Node/PlayerNode.csd" />
           <FilePathData Path="Node/Floor.csd" />
           <FilePathData Path="Node/FirstFloor.csd" />
+          <FilePathData Path="Node/Alien.csd" />
+          <FilePathData Path="Scene/GameScene.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Node/PlayerNode.csd" />
+        <ActiveDocument Path="Scene/GameScene.csd" />
       </Value>
     </Item>
   </Properties>

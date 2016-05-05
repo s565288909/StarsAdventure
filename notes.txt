@@ -12,3 +12,13 @@ convertToNodeSpace 与 convertToWorldSpace
 auto m_blockPos = floornode->convertToWorldSpace(blockRect.origin);
 
 Node->getPosition()获取也是相对于节点Node的坐标，而不是世界坐标系
+
+20160505:
+Sequence符合动作函数的使用：
+尾部要加null
+Sequence可以嵌套Sequence动作
+auto action = Sequence::create(JumpUpAction, CallFunc::create([&]{
+	m_State = State::JumpDown;
+	CCLOG("JumpDown Over");
+	}), nullptr);
+m_Node->runAction(Sequence::create(action, JumpDownAction, nullptr));

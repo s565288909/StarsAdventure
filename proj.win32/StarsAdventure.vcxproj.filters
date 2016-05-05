@@ -51,6 +51,9 @@
     <ClCompile Include="..\Classes\SceneManager.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Monster.cpp">
+      <Filter>src\Enity</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\DefineUtils.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Monster.h">
+      <Filter>src\Enity</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

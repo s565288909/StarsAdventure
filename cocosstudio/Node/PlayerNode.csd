@@ -2,7 +2,7 @@
   <PropertyGroup Name="PlayerNode" Type="Node" ID="5b34a353-786e-4fbe-94b1-96c29ae96c33" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="223" Speed="1.0000" ActivedAnimationName="P_Jump">
+      <Animation Duration="223" Speed="1.0000" ActivedAnimationName="P_Walk">
         <Timeline ActionTag="-1816853842" Property="FileData">
           <TextureFrame FrameIndex="0" Tween="False">
             <TextureFile Type="MarkedSubImage" Path="Images/Player/player_idle_1.png" Plist="Images/Player/Player.plist" />
@@ -244,7 +244,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Images/Player/player_idle_1.png" Plist="Images/Player/Player.plist" />
+            <FileData Type="MarkedSubImage" Path="Images/Player/player_walk_1.png" Plist="Images/Player/Player.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Player_Right" ActionTag="-1507850693" Tag="17" IconVisible="False" LeftMargin="-68.0000" RightMargin="-68.0000" TopMargin="-88.5000" BottomMargin="-88.5000" FlipX="True" ctype="SpriteObjectData">
@@ -255,7 +255,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Images/Player/player_idle_1.png" Plist="Images/Player/Player.plist" />
+            <FileData Type="MarkedSubImage" Path="Images/Player/player_walk_1.png" Plist="Images/Player/Player.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>

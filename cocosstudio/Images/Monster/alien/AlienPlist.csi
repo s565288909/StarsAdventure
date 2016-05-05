@@ -1,0 +1,30 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="AlienPlist" Type="Plist" ID="585bae1a-d69f-441f-b0e1-af5ddf678dce" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="1" AllowRotation="True" AllowAnySize="False" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="Images/Monster/alien/alien_attack_1.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_2.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_3.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_4.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_5.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_6.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_7.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_8.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_9.png" />
+      <FilePathData Path="Images/Monster/alien/alien_attack_bullet.png" />
+      <FilePathData Path="Images/Monster/alien/alien_dead_1.png" />
+      <FilePathData Path="Images/Monster/alien/alien_dead_2.png" />
+      <FilePathData Path="Images/Monster/alien/alien_dead_3.png" />
+      <FilePathData Path="Images/Monster/alien/alien_dead_4.png" />
+      <FilePathData Path="Images/Monster/alien/alien_idle_1.png" />
+      <FilePathData Path="Images/Monster/alien/alien_idle_2.png" />
+      <FilePathData Path="Images/Monster/alien/alien_idle_3.png" />
+      <FilePathData Path="Images/Monster/alien/alien_idle_4.png" />
+      <FilePathData Path="Images/Monster/alien/alien_walk_1.png" />
+      <FilePathData Path="Images/Monster/alien/alien_walk_2.png" />
+      <FilePathData Path="Images/Monster/alien/alien_walk_3.png" />
+      <FilePathData Path="Images/Monster/alien/alien_walk_4.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

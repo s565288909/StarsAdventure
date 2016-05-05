@@ -14,7 +14,9 @@
 USING_NS_CC;
 
 #define JumpUpAction EaseSineOut::create(MoveBy::create(0.5f, Vec2(0, 300)))
-#define JumpDownAction EaseSineIn::create(MoveBy::create(16.6f, Vec2(0, 10000)))
+#define JumpDownAction EaseSineIn::create(MoveBy::create(10, Vec2(0, -5000)))
+
+
 
 
 #endif /* DefineUtils_h */

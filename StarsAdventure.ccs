@@ -17,6 +17,33 @@
             <Image Name="bg.png" />
             <Image Name="startbt.png" />
           </Folder>
+          <Folder Name="Monster">
+            <Folder Name="alien">
+              <Image Name="alien_attack_1.png" />
+              <Image Name="alien_attack_2.png" />
+              <Image Name="alien_attack_3.png" />
+              <Image Name="alien_attack_4.png" />
+              <Image Name="alien_attack_5.png" />
+              <Image Name="alien_attack_6.png" />
+              <Image Name="alien_attack_7.png" />
+              <Image Name="alien_attack_8.png" />
+              <Image Name="alien_attack_9.png" />
+              <Image Name="alien_attack_bullet.png" />
+              <Image Name="alien_dead_1.png" />
+              <Image Name="alien_dead_2.png" />
+              <Image Name="alien_dead_3.png" />
+              <Image Name="alien_dead_4.png" />
+              <Image Name="alien_idle_1.png" />
+              <Image Name="alien_idle_2.png" />
+              <Image Name="alien_idle_3.png" />
+              <Image Name="alien_idle_4.png" />
+              <Image Name="alien_walk_1.png" />
+              <Image Name="alien_walk_2.png" />
+              <Image Name="alien_walk_3.png" />
+              <Image Name="alien_walk_4.png" />
+              <PlistInfo Name="AlienPlist.csi" Type="Plist" />
+            </Folder>
+          </Folder>
           <Folder Name="Player">
             <PlistInfo Name="Player.csi" Type="Plist" />
             <Image Name="player_attack_1.png" />
@@ -62,6 +89,7 @@
           </Folder>
         </Folder>
         <Folder Name="Node">
+          <Project Name="Alien.csd" Type="Node" />
           <Project Name="FirstFloor.csd" Type="Node" />
           <Project Name="Floor.csd" Type="Node" />
           <Project Name="PlayerNode.csd" Type="Node" />
