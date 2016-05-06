@@ -39,10 +39,9 @@ bool GameScene::init(){
 	this->addChild(rootnode);
     rootnode->getChildByName("gamebg")->setGlobalZOrder(-10);
 
-	player = (Player*)CSLoader::createNode("Node/PlayerNode.csb");
-	player->setTimeLineAction(CSLoader::createTimeline("Node/PlayerNode.csb"));
+	player = Player::Create(CSLoader::createNode("Node/PlayerNode.csb"));
 	//player->initData();
-	//rootnode->addChild(player);
+	rootnode->addChild(player->getNode());
 
 	n_GameUI = rootnode->getChildByName("UILayer");
     
@@ -63,19 +62,19 @@ bool GameScene::init(){
     bt_Right->addTouchEventListener(CC_CALLBACK_2(GameScene::BtRightOnTouch, this));
 	bt_Attack->addClickEventListener(CC_CALLBACK_1(GameScene::BtAttackOnClick, this));
 	bt_Jump->addClickEventListener(CC_CALLBACK_1(GameScene::BtJumpOnClick, this));
-
     this->scheduleUpdate();
 	return true;
 }
 
 void GameScene::update(float delta){
- //   if (moveL) {
- //       player->MoveLeft();
- //   }else if (moveR){
- //       player->MoveRight();
- //   }
-	//checkNowFloor();
-	//collisionWithFloors();
+    if (moveL) {
+        player->MoveLeft();
+    }else if (moveR){
+        player->MoveRight();
+    }
+
+	checkNowFloor();
+	collisionWithFloors();
 }
 
 void GameScene::genFloors(Node* node){
@@ -126,104 +125,104 @@ void GameScene::checkNowFloor(){
 }
 
 void GameScene::collisionWithFloors(){
-    auto playerRect = player->getNowNode()->getBoundingBox();
+    //auto playerRect = player->getNowNode()->getBoundingBox();
+	auto playerRect = Rect(player->getNode()->convertToWorldSpace(player->getNowNode()->getBoundingBox().origin), player->getNowNode()->getBoundingBox().size);
 	auto bottomRect = m_bottomNode->getBoundingBox();
 	//collison with bottom
 	if (floorNowNum == 1)
 	{
         if (player->m_State != Player::State::JumpDown && player->m_State != Player::State::JumpUp && !playerRect.intersectsRect(bottomRect)) {
 			CCLOG("not collision with the bottomrect,jump down");
-			player->Jumps(true);
+			player->Jumps(false,true);
         }
 		//左右边界检测
-		if ( player->getPositionX() - playerRect.size.width/2 < 0 )
+		if ( player->getNode()->getPositionX() - playerRect.size.width/2 < 0 )
 		{
-			player->setPositionX(playerRect.size.width/2);
+			player->getNode()->setPositionX(playerRect.size.width / 2);
 		}
-		else if (player->getPositionX() + playerRect.size.width/2 > bottomRect.size.width)
+		else if (player->getNode()->getPositionX() + playerRect.size.width / 2 > bottomRect.size.width)
 		{
-			player->setPositionX(bottomRect.size.width - playerRect.size.width/2);
+			player->getNode()->setPositionX(bottomRect.size.width - playerRect.size.width / 2);
 		}
 		//下边界检测
 		if (playerRect.intersectsRect(bottomRect)) {
-			CCLOG("collision with the bottomrect,restore the player pos");
-			player->setPositionY(bottomRect.getMidY() + bottomRect.size.height / 2 + playerRect.size.height / 2);
-			if (player->m_State == Player::State::JumpDown) player->KeepIdle();
+			//向上跳跃时不检测
+			if (player->m_State != Player::State::JumpUp) player->getNode()->setPositionY(bottomRect.getMidY() + bottomRect.size.height / 2 + playerRect.size.height / 2);
+			if (player->m_State == Player::State::JumpDown){
+				CCLOG("collision bottom");
+				player->KeepIdle();
+				player->getNode()->setPositionY(bottomRect.getMidY() + bottomRect.size.height / 2 + playerRect.size.height / 2 - 1);
+			} 
 		}
     }
     
 	//collision with floors
-	//for (auto floornode : m_floorsNode->getChildren())
-	//{
-	//	int checknum = Value(floornode->getName().substr(6, 7)).asInt();
-	//	if (checknum == floorNowNum - 1 || checknum == floorNowNum)
-	//	{
-	//		for (auto blockSprite : ((Floor*)floornode)->getBlocksSprites())
-	//		{
-	//			auto blockRectWorld = Rect(floornode->convertToWorldSpace(blockSprite->getBoundingBox().origin).x, floornode->convertToWorldSpace(blockSprite->getBoundingBox().origin).y, blockSprite->getBoundingBox().size.width, blockSprite->getBoundingBox().size.height);
-	//			if (player->getDropRect().intersectsRect(blockRectWorld)){
-	//				//collision with downfloor
-	//				if ( floorNowNum>1 && (player->m_State == Player::State::Idle || player->m_State == Player::State::Walk))
-	//				{
-	//					if (playerRect.intersectsRect(blockRectWorld)) {
-	//						player->setPositionY(blockRectWorld.getMaxY() + player->getDropRect().size.height/2);
-	//					}
-	//					else
-	//					{
-	//						player->Jumps(true);
-	//					}
-	//				}
-	//				else if (player->m_State == Player::State::JumpDown)
-	//				{
-	//					if (player->getDropRect().intersectsRect(blockRectWorld)){
-	//						//两矩形碰撞时，PlayerRect的底边小于BlockRect中心点向上的1/4时，表示在其之上，停滞在block之上.否则停滞在block左右方
-	//						if (playerRect.getMinY() <= blockRectWorld.getMidY() + blockRectWorld.size.height/4)
-	//						{
-	//							player->setPositionY(blockRectWorld.getMaxY() + player->getDropRect().size.height / 2);
-	//							player->KeepIdle();
-	//						}
-	//						else {
-	//							//left
-	//							if (playerRect.getMaxX() <= blockRectWorld.getMidX())
-	//							{
-	//								player->setPositionX(blockRectWorld.getMinX() - player->getDropRect().size.width / 2);
-	//							}
-	//							//right
-	//							else if (playerRect.getMinX() > blockRectWorld.getMidX())
-	//							{
-	//								player->setPositionX(blockRectWorld.getMaxX() + player->getDropRect().size.width / 2);
-	//							}
-	//						}
-	//					}
-	//				}
-	//				else if (player->m_State == Player::State::JumpUp)
-	//				{
-	//					if (player->getDropRect().intersectsRect(blockRectWorld)){
-	//						//两矩形碰撞时，PlayerRect的顶边小于BlockRect中心点向下的1/4时，表示撞击。否则停滞在block左右方
-	//						if (playerRect.getMaxY() <= blockRectWorld.getMidY() - blockRectWorld.size.height / 4)
-	//						{
-	//							player->stopAllActions();
-	//							player->Jumps(true);
-	//						}
-	//						else {
-	//							//left
-	//							if (playerRect.getMaxX() <= blockRectWorld.getMidX())
-	//							{
-	//								player->setPositionX(blockRectWorld.getMinX() - player->getDropRect().size.width / 2);
-	//							}
-	//							//right
-	//							else if (playerRect.getMinX() > blockRectWorld.getMidX())
-	//							{
-	//								player->setPositionX(blockRectWorld.getMaxX() + player->getDropRect().size.width / 2);
-	//							}
-	//						}
-	//					}
-	//				}
-	//			}
-	//		}
-	//	}
+	for (auto floornode : m_floorsNode->getChildren())
+	{
+		int checknum = Value(floornode->getName().substr(6, 7)).asInt();
+		if (checknum == floorNowNum - 1 || checknum == floorNowNum)
+		{
+			for (auto blockSprite : ((Floor*)floornode)->getBlocksSprites())
+			{
+				if (!blockSprite->isVisible()) continue;
+				auto blockRectWorld = Rect(floornode->convertToWorldSpace(blockSprite->getBoundingBox().origin).x, floornode->convertToWorldSpace(blockSprite->getBoundingBox().origin).y, blockSprite->getBoundingBox().size.width, blockSprite->getBoundingBox().size.height);
+				int i = 0;
+				if (player->getDropRect().intersectsRect(blockRectWorld)){
+					//collision with downfloor
+					if ( floorNowNum>1 && (player->m_State == Player::State::Idle || player->m_State == Player::State::Walk))
+					{
+						if (playerRect.intersectsRect(blockRectWorld)) {
+							player->getNode()->setPositionY(blockRectWorld.getMaxY() + player->getDropRect().size.height/2);
+						}
+						else
+						{
+							player->Jumps(false,true);
+						}
+					}
+					else if (player->m_State == Player::State::JumpUp || player->m_State == Player::State::JumpDown)
+					{
 
-	//}
+						if (player->getDropRect().intersectsRect(blockRectWorld)){
+							float rectW = std::min(player->getDropRect().getMaxX(), blockRectWorld.getMaxX()) - std::max(player->getDropRect().getMinX(), blockRectWorld.getMinX());
+							float rectH = std::min(player->getDropRect().getMaxY(), blockRectWorld.getMaxY()) - std::max(player->getDropRect().getMinY(), blockRectWorld.getMinY());
+							CCLOG("W:%f,H:%f",rectW,rectH);
+							if (rectW >= rectH)
+							{
+								if (player->m_State == Player::State::JumpUp)
+								{
+									CCLOG("jumpup");
+									blockSprite->setVisible(false);
+									player->m_State = Player::State::Idle;
+									player->getNode()->stopActionByTag(1);
+									player->Jumps(true, false);
+								}
+								else if (player->m_State == Player::State::JumpDown)
+								{
+									CCLOG("jumpdown");
+									player->getNode()->setPositionY(blockRectWorld.getMaxY() + player->getDropRect().size.height / 2);
+									player->KeepIdle();
+								}
+							}
+							else
+							{
+								//left
+								if (playerRect.getMaxX() <= blockRectWorld.getMidX())
+								{
+									player->getNode()->setPositionX(blockRectWorld.getMinX() - player->getDropRect().size.width / 2);
+								}
+								//right
+								else if (playerRect.getMinX() > blockRectWorld.getMidX())
+								{
+									player->getNode()->setPositionX(blockRectWorld.getMaxX() + player->getDropRect().size.width / 2);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
 
 	//collision with blocks
 	
@@ -280,5 +279,5 @@ void GameScene::BtAttackOnClick(Ref *pSender){
 }
 
 void GameScene::BtJumpOnClick(Ref *pSender){
-    player->Jumps(false);
+    player->Jumps(false,false);
 }

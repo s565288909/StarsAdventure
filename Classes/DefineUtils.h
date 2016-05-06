@@ -13,8 +13,11 @@
 
 USING_NS_CC;
 
-#define JumpUpAction EaseSineOut::create(MoveBy::create(0.5f, Vec2(0, 300)))
-#define JumpDownAction EaseSineIn::create(MoveBy::create(10, Vec2(0, -5000)))
+#define JumpUpAction EaseSineOut::create(MoveBy::create(0.35f, Vec2(0, 300)))
+
+#define JumpDownActions MoveBy::create(4,Vec2(0,-3000))
+
+#define DropActions MoveBy::create(3,Vec2(0,-3000))
 
 
 

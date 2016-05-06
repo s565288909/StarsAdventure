@@ -8,92 +8,132 @@ Player::Player(){}
 
 Player::~Player(){}
 
+#define NowNodeWorldVec2 m_Node->convertToWorldSpace(getNowNode()->getBoundingBox().origin)
+
+Player* Player::Create(Node* node){
+	Player *pRet = new(std::nothrow) Player();
+	if (pRet) 
+	{ 
+		pRet->setNode(node);
+		pRet->initData();
+		pRet->retain();
+		return pRet; 
+	} 
+	else 
+	{ 
+		delete pRet; 
+		pRet = nullptr; 
+		return nullptr; 
+	} 
+}
+
 void Player::initData(){
 	isDead = false;
 	HP = 100;
 	MP = 0;
     moveSpeed = 3;
     jumpSpeed = 3;
-    this->runAction(m_TimeLineAction);
-	leftNode = this->getChildByName("Player_Left");
-	rightNode = this->getChildByName("Player_Right");
-	leftNode->setVisible(false);
-	rightNode->setVisible(false);
-	m_Dir = Direction::Left;
+    m_action = CSLoader::createTimeline("Node/PlayerNode.csb");
+    m_Node->runAction(m_action);
+	leftNode = m_Node->getChildByName("Player_Left");
+	rightNode = m_Node->getChildByName("Player_Right");
+	m_Dir = Dir::Left;
 	switch (m_Dir)
 	{
-	case Direction::Left:
+	case Enity::Left:
 		leftNode->setVisible(true);
+		rightNode->setVisible(false);
 		break;
-	case Direction::Right:
+	case Enity::Right:
+		leftNode->setVisible(false);
 		rightNode->setVisible(true);
 		break;
 	}
-	m_TimeLineAction->play("P_Idle", true);
+    m_action->play("P_Idle", true);
 	m_State = State::Idle;
-	this->setPosition(545,196);
+	m_Node->setPosition(545,196);
+}
+
+Node* Player::getNowNode(){
+	switch (m_Dir)
+	{
+	case Enity::Left:
+		return leftNode;
+	case Enity::Right:
+		return rightNode;
+	}
 }
 
 Rect Player::getDropRect(){
-	return Rect(this->getPositionX() - getNowNode()->getBoundingBox().size.width / 4, this->getPositionY() - getNowNode()->getBoundingBox().size.height / 2, getNowNode()->getBoundingBox().size.width / 2, getNowNode()->getBoundingBox().size.height);
+	return Rect(NowNodeWorldVec2.x + getNowNode()->getBoundingBox().size.width / 4, NowNodeWorldVec2.y, getNowNode()->getBoundingBox().size.width / 2, getNowNode()->getBoundingBox().size.height);
 }
 
 void Player::KeepIdle(){
-    this->stopAllActions();
-	m_TimeLineAction->play("P_Idle", true);
+	this->getNode()->stopActionByTag(1);
     m_State = State::Idle;
+	m_action->play("P_Idle", true);
 }
 
 void Player::MoveLeft()
 {
     if (m_State==State::Idle) {
-        if (m_Dir != Direction::Left) {
-			m_Dir = Direction::Left;
+        if (m_Dir != Dir::Left) {
+            m_Dir = Dir::Left;
             leftNode->setVisible(true);
             rightNode->setVisible(false);
         }
-		m_TimeLineAction->play("P_Walk", true);
+        m_action->play("P_Walk", true);
         m_State = State::Walk;
     }
-    this->setPositionX(this->getPositionX()-moveSpeed);
+    m_Node->setPositionX(m_Node->getPositionX()-moveSpeed);
 }
 
 void Player::MoveRight()
 {
     if (m_State==State::Idle) {
-        if (m_Dir != Direction::Right) {
-			m_Dir = Direction::Right;
+        if (m_Dir != Dir::Right) {
+            m_Dir = Dir::Right;
             leftNode->setVisible(false);
             rightNode->setVisible(true);
         }
-        m_TimeLineAction->play("P_Walk", true);
+        m_action->play("P_Walk", true);
         m_State = State::Walk;
     }
-    this->setPositionX(this->getPositionX()+moveSpeed);
+    m_Node->setPositionX(m_Node->getPositionX()+moveSpeed);
 }
 
 void Player::StopMove(){
-	m_TimeLineAction->play("P_Idle", true);
+    m_action->play("P_Idle", true);
     m_State = State::Idle;
 }
 
-void Player::Jumps(bool isDrop){
+void Player::Jumps(bool isDrop,bool isDown){
     if (m_State!=State::JumpUp && m_State!=State::JumpDown && m_State!=State::Attack) {
-		m_TimeLineAction->play("P_Jump", false);
+        m_action->play("P_Jump", false);
 //        m_action->setAnimationEndCallFunc("P_Jump", [&]{
 //            m_action->play("P_Idle", true);
 //            m_State = State::Idle;
 //        });
         if (isDrop) {
 			m_State = State::JumpDown;
-			this->runAction(JumpDownAction);
+			auto action = DropActions;
+			action->setTag(1);
+			m_Node->runAction(action);
         }
+		else if (isDown){
+			m_State = State::JumpDown;
+			auto action = JumpDownActions;
+			action->setTag(1);
+			m_Node->runAction(action);
+		}
         else{
-			auto action = Sequence::create(JumpUpAction, CallFunc::create([&]{
+			m_State = State::JumpUp;
+			auto action = Sequence::create(Sequence::create(JumpUpAction, CallFunc::create([&]{
 				m_State = State::JumpDown;
-				CCLOG("JumpDown Over");
-			}), nullptr);
-			this->runAction(Sequence::create(action, JumpDownAction, nullptr));
+				CCLOG("jumpupTojumpdown");
+			}), nullptr), JumpDownActions, nullptr);
+			action->setTag(1);
+			m_Node->runAction(action);
         }
     }
 }
@@ -101,10 +141,10 @@ void Player::Jumps(bool isDrop){
 void Player::Attacks()
 {
     if (m_State!=State::JumpUp && m_State!=State::JumpDown) {
-		m_TimeLineAction->play("P_Attack", false);
+        m_action->play("P_Attack", false);
         
-		m_TimeLineAction->setAnimationEndCallFunc("P_Attack", [&]{
-			m_TimeLineAction->play("P_Idle", true);
+        m_action->setAnimationEndCallFunc("P_Attack", [&]{
+            m_action->play("P_Idle", true);
             m_State = State::Idle;
         });
         m_State = State::Attack;
@@ -116,10 +156,10 @@ void Player::RestoreMove(){
 	switch (m_Dir)
 	{
 	case Enity::Left:
-		this->setPositionX(this->getPositionX() + moveSpeed);
+		m_Node->setPositionX(m_Node->getPositionX() + moveSpeed);
 		break;
 	case Enity::Right:
-		this->setPositionX(this->getPositionX() - moveSpeed);
+		m_Node->setPositionX(m_Node->getPositionX() - moveSpeed);
 		break;
 	}
 }

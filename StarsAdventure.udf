@@ -34,9 +34,8 @@
           <FilePathData Path="Node/Floor.csd" />
           <FilePathData Path="Node/FirstFloor.csd" />
           <FilePathData Path="Node/Alien.csd" />
-          <FilePathData Path="Scene/GameScene.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="Scene/GameScene.csd" />
+        <ActiveDocument Path="Node/UILayer.csd" />
       </Value>
     </Item>
   </Properties>

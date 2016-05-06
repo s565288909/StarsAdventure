@@ -1,18 +1,15 @@
 #include "Enity.h"
 
 USING_NS_CC;
-using namespace cocostudio::timeline;
 
 Enity::Enity(){}
 
 Enity::~Enity(){}
 
-Node* Enity::getNowNode(){
-	switch (m_Dir)
-	{
-	case Enity::Left:
-		return leftNode;
-	case Enity::Right:
-		return rightNode;
-	}
+void Enity::setNode(Node* node){
+	this->m_Node = node;
+}
+
+Node* Enity::getNode(){
+	return m_Node;
 }
