@@ -19,6 +19,7 @@ public:
 	CREATE_FUNC(GameScene);
 
 private:
+    cocos2d::Camera* ui_cam;
 	//UI's Node
 	cocos2d::Node* n_GameUI;
 	//Floors's Node
@@ -34,11 +35,14 @@ private:
 	int floorNowNum;
 	//floors 总层数
 	int floorsNum;
+    bool blockCollusion;
+    bool cameraMove;
 
 	void genFloors(cocos2d::Node* node);
 	void setAllZOrders();
 	void checkNowFloor();
 	void collisionWithFloors();
+    void cameraMoveTo();
 
     void BtLeftOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);
     void BtRightOnTouch(Ref *pSender,cocos2d::ui::Widget::TouchEventType type);

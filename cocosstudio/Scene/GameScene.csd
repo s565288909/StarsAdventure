@@ -38,6 +38,26 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="Node/UILayer.csd" Plist="" />
           </AbstractNodeData>
+          <AbstractNodeData Name="Alien_1" ActionTag="-1885712150" Tag="43" IconVisible="True" LeftMargin="79.1722" RightMargin="1056.8278" TopMargin="442.0692" BottomMargin="197.9308" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="79.1722" Y="197.9308" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.0697" Y="0.3093" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="Node/Alien.csd" Plist="" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="Alien_2" ActionTag="323800279" Tag="50" IconVisible="True" LeftMargin="1068.8198" RightMargin="67.1802" TopMargin="442.0699" BottomMargin="197.9301" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="1068.8198" Y="197.9301" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition X="0.9409" Y="0.3093" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="Node/Alien.csd" Plist="" />
+          </AbstractNodeData>
         </Children>
       </ObjectData>
     </Content>

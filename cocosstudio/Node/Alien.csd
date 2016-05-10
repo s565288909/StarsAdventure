@@ -2,7 +2,7 @@
   <PropertyGroup Name="Alien" Type="Node" ID="578eb970-15a2-4374-9015-d747a2fe762c" Version="3.10.0.0" />
   <Content ctype="GameProjectContent">
     <Content>
-      <Animation Duration="159" Speed="1.0000" ActivedAnimationName="Attack">
+      <Animation Duration="159" Speed="1.0000">
         <Timeline ActionTag="250808068" Property="FileData">
           <TextureFrame FrameIndex="0" Tween="False">
             <TextureFile Type="MarkedSubImage" Path="Images/Monster/alien/alien_idle_1.png" Plist="Images/Monster/alien/AlienPlist.plist" />
@@ -154,22 +154,22 @@
       </Animation>
       <AnimationList>
         <AnimationInfo Name="Idle" StartIndex="0" EndIndex="32">
-          <RenderColor A="150" R="255" G="240" B="245" />
+          <RenderColor A="255" R="255" G="240" B="245" />
         </AnimationInfo>
         <AnimationInfo Name="Walk" StartIndex="35" EndIndex="67">
-          <RenderColor A="150" R="255" G="99" B="71" />
+          <RenderColor A="255" R="255" G="99" B="71" />
         </AnimationInfo>
         <AnimationInfo Name="Dead" StartIndex="70" EndIndex="100">
-          <RenderColor A="150" R="240" G="248" B="255" />
+          <RenderColor A="255" R="240" G="248" B="255" />
         </AnimationInfo>
         <AnimationInfo Name="Attack" StartIndex="105" EndIndex="159">
-          <RenderColor A="150" R="255" G="255" B="255" />
+          <RenderColor A="255" R="255" G="255" B="255" />
         </AnimationInfo>
       </AnimationList>
       <ObjectData Name="Node" Tag="9" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
-          <AbstractNodeData Name="Alien_Left" ActionTag="250808068" Tag="11" IconVisible="False" LeftMargin="-23.0000" RightMargin="-23.0000" TopMargin="-23.0000" BottomMargin="-23.0000" ctype="SpriteObjectData">
+          <AbstractNodeData Name="Alien_Left" ActionTag="250808068" Tag="11" IconVisible="False" LeftMargin="-68.0000" RightMargin="-68.0000" TopMargin="-88.5000" BottomMargin="-88.5000" ctype="SpriteObjectData">
             <Size X="136.0000" Y="177.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position />
@@ -177,7 +177,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Images/Monster/alien/alien_attack_3.png" Plist="Images/Monster/alien/AlienPlist.plist" />
+            <FileData Type="MarkedSubImage" Path="Images/Monster/alien/alien_walk_2.png" Plist="Images/Monster/alien/AlienPlist.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
           <AbstractNodeData Name="Alien_Right" ActionTag="1388322024" Tag="13" IconVisible="False" LeftMargin="-68.0000" RightMargin="-68.0000" TopMargin="-88.5000" BottomMargin="-88.5000" FlipX="True" ctype="SpriteObjectData">
@@ -188,7 +188,7 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
-            <FileData Type="MarkedSubImage" Path="Images/Monster/alien/alien_attack_3.png" Plist="Images/Monster/alien/AlienPlist.plist" />
+            <FileData Type="MarkedSubImage" Path="Images/Monster/alien/alien_walk_2.png" Plist="Images/Monster/alien/AlienPlist.plist" />
             <BlendFunc Src="1" Dst="771" />
           </AbstractNodeData>
         </Children>

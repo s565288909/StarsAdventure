@@ -76,12 +76,12 @@ void Player::KeepIdle(){
 
 void Player::MoveLeft()
 {
+    if (m_Dir != Dir::Left) {
+        m_Dir = Dir::Left;
+        leftNode->setVisible(true);
+        rightNode->setVisible(false);
+    }
     if (m_State==State::Idle) {
-        if (m_Dir != Dir::Left) {
-            m_Dir = Dir::Left;
-            leftNode->setVisible(true);
-            rightNode->setVisible(false);
-        }
         m_action->play("P_Walk", true);
         m_State = State::Walk;
     }
@@ -90,12 +90,12 @@ void Player::MoveLeft()
 
 void Player::MoveRight()
 {
+    if (m_Dir != Dir::Right) {
+        m_Dir = Dir::Right;
+        leftNode->setVisible(false);
+        rightNode->setVisible(true);
+    }
     if (m_State==State::Idle) {
-        if (m_Dir != Dir::Right) {
-            m_Dir = Dir::Right;
-            leftNode->setVisible(false);
-            rightNode->setVisible(true);
-        }
         m_action->play("P_Walk", true);
         m_State = State::Walk;
     }

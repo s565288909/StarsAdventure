@@ -42,7 +42,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     FileUtils::getInstance()->addSearchPath("res");
 
     // create a scene. it's an autorelease object
-	SceneManager::getInstance()->changeScene(SceneManager::GameScene);
+	SceneManager::getInstance()->changeScene(SceneManager::MenuScene);
 
     return true;
 }
