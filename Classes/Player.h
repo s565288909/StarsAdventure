@@ -7,7 +7,7 @@
 class Player : public Enity
 {
 public:
-	Player();
+	Player(cocos2d::Node* node);
 	~Player();
     enum State
     {
@@ -20,7 +20,7 @@ public:
         Drop
     } m_State;
 	void initData();
-	static Player* Create(cocos2d::Node* node);
+	//static Player* Create(cocos2d::Node* node);
 	cocos2d::Node* getNowNode();
 	cocos2d::Rect getDropRect();
     void KeepIdle();

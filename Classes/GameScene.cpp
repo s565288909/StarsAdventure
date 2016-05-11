@@ -44,7 +44,7 @@ bool GameScene::init(){
     this->addChild(rootnode);
     rootnode->getChildByName("gamebg")->setGlobalZOrder(-10);
     
-    player = Player::Create(CSLoader::createNode("Node/PlayerNode.csb"));
+    player = new Player(CSLoader::createNode("Node/PlayerNode.csb"));
     //player->initData();
     rootnode->addChild(player->getNode());
     

@@ -4,28 +4,31 @@
 USING_NS_CC;
 using namespace cocostudio;
 
-Player::Player(){}
+Player::Player(Node* node){
+	this->m_Node = node;
+	initData();
+}
 
 Player::~Player(){}
 
 #define NowNodeWorldVec2 m_Node->convertToWorldSpace(getNowNode()->getBoundingBox().origin)
 
-Player* Player::Create(Node* node){
-	Player *pRet = new(std::nothrow) Player();
-	if (pRet) 
-	{ 
-		pRet->setNode(node);
-		pRet->initData();
-		pRet->retain();
-		return pRet; 
-	} 
-	else 
-	{ 
-		delete pRet; 
-		pRet = nullptr; 
-		return nullptr; 
-	} 
-}
+//Player* Player::Create(Node* node){
+//	Player *pRet = new(std::nothrow) Player();
+//	if (pRet) 
+//	{ 
+//		pRet->setNode(node);
+//		pRet->initData();
+//		pRet->retain();
+//		return pRet; 
+//	} 
+//	else 
+//	{ 
+//		delete pRet; 
+//		pRet = nullptr; 
+//		return nullptr; 
+//	} 
+//}
 
 void Player::initData(){
 	isDead = false;
